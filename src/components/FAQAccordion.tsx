@@ -28,7 +28,7 @@ export default function FAQAccordion({
               </AccordionItemButton>
             </AccordionItemHeading>
             <AccordionItemPanel
-              className={`text-sm transition-[height,visible] ${expanded ? "visible h-16 px-6 py-3" : "invisible h-0"}`}
+              className={`text-sm transition-[height,visible] ${expanded ? "visible h-14 px-6 py-3" : "invisible h-0"}`}
             >
               {accordionItem}
             </AccordionItemPanel>

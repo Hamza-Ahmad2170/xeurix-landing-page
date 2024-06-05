@@ -128,13 +128,13 @@ export default function Impact() {
           simulations. Select below to compare traditional hiring methods with
           Xeurix’s cutting-edge approach.
         </Paragraph>
-        <div className="mx-auto max-w-3xl">
-          <ul className="flex justify-between gap-5 rounded-md bg-slate-600/20">
+        <div className="mx-auto max-w-4xl">
+          <ul className="flex justify-between rounded-md bg-slate-600/20">
             {impactData.map((data, index) => (
               <button
                 key={index}
                 onClick={() => handleTabChange(index)}
-                className={`relative rounded-md p-3 ${activeTabIndex === index ? "bg-[#d4145a] text-white" : ""}`}
+                className={`relative basis-1/2 rounded-md p-3 ${activeTabIndex === index ? "bg-[#d4145a] text-white" : ""}`}
               >
                 {activeTabIndex === index && (
                   <span className="absolute left-[45%] top-full h-0 w-0 border-x-8 border-t-[16px] border-x-transparent border-t-[#d4145a]"></span>
@@ -146,9 +146,9 @@ export default function Impact() {
           <div className="py-4">
             <p>{impactData[activeTabIndex].content}</p>
           </div>
-          <div className="numbers-display" ref={ref}>
+          <div className="flex justify-between py-6" ref={ref}>
             {impactData[activeTabIndex].numbers.map((num, index) => (
-              <div key={index} className="number">
+              <div key={index} className="basis-1/4 text-center">
                 {inView && (
                   <CountUp
                     start={
@@ -159,8 +159,12 @@ export default function Impact() {
                     end={num}
                     duration={1}
                     separator=","
+                    className="text-4xl font-semibold"
                   />
                 )}
+                <span className="text-4xl font-semibold">%</span>
+                <p className="py-4 text-xl font-semibold">Time Saved</p>
+                <p>Relies heavily on human intuition and manual processes,</p>
               </div>
             ))}
           </div>
