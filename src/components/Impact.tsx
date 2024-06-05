@@ -134,7 +134,7 @@ export default function Impact() {
               <button
                 key={index}
                 onClick={() => handleTabChange(index)}
-                className={`relative basis-1/2 rounded-md p-3 ${activeTabIndex === index ? "bg-[#d4145a] text-white" : ""}`}
+                className={`relative basis-1/2 rounded-md p-3 text-[.60rem] md:text-base ${activeTabIndex === index ? "bg-[#d4145a] text-white" : ""}`}
               >
                 {activeTabIndex === index && (
                   <span className="absolute left-[45%] top-full h-0 w-0 border-x-8 border-t-[16px] border-x-transparent border-t-[#d4145a]"></span>
@@ -146,9 +146,12 @@ export default function Impact() {
           <div className="py-4">
             <p>{impactData[activeTabIndex].content}</p>
           </div>
-          <div className="flex justify-between py-6" ref={ref}>
+          <div
+            className="flex flex-col flex-wrap justify-between gap-y-20 py-6 md:flex-row"
+            ref={ref}
+          >
             {impactData[activeTabIndex].numbers.map((num, index) => (
-              <div key={index} className="basis-1/4 text-center">
+              <div key={index} className="mx-auto w-48 text-center md:basis-52">
                 {inView && (
                   <CountUp
                     start={

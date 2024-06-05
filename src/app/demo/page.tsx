@@ -2,11 +2,16 @@ import React from "react";
 
 export default function page() {
   return (
-    <div className="container">
+    <div className="container py-5">
       <div className="w-full max-w-[500px] bg-white">
         <h1 className="mb-4 font-bold">Request demo</h1>
         <form>
-          <label htmlFor="first_name before:content-['*']">First Name</label>
+          <label
+            htmlFor="first_name "
+            className="before:text-[#d4145a] before:content-['*']"
+          >
+            First Name
+          </label>
           <input
             type="text"
             className="w-full"
