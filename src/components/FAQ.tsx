@@ -1,7 +1,10 @@
 "use client";
 import React from "react";
-import FAQAccordion from "./FAQAccordion";
 import { Accordion, AccordionItem } from "react-accessible-accordion";
+import Paragraph from "./SectionParagraph";
+import Heading from "./SectionHeading";
+import FAQAccordion from "./FAQAccordion";
+import MaxScreen from "./MaxScreen";
 
 const faqItems = [
   {
@@ -37,52 +40,54 @@ const faqItems = [
 
 export default function FAQ() {
   return (
-    <div className="flex h-screen items-center justify-center bg-[#f4f5f7] bg-[url('/img/zigzag1.webp')] bg-right bg-no-repeat">
-      <div className="container py-28">
-        <div className="relative mb-[60px] text-center">
-          <div className="absolute left-0 top-0 z-10 w-full text-center text-[10rem] font-bold leading-6 text-[#29abe2] opacity-10">
-            FAQ
+    <div className="bg-[#f4f5f7] py-10">
+      <div className="container">
+        <MaxScreen>
+          <div className="relative space-y-5 text-center">
+            <div className="absolute bottom-1/2 z-10 w-full text-center text-[10rem] font-bold leading-6 text-[#29abe2] opacity-10">
+              FAQ
+            </div>
+            <Heading className="text-5xl font-medium leading-[1.2]">
+              Question and Answers
+            </Heading>
+            <Paragraph className="mx-auto max-w-lg">
+              Listed questions and answers, all supposed to be commonly asked in
+              some context, and pertaining to a particular topic.
+            </Paragraph>
           </div>
-          <h3 className="text-5xl font-medium leading-[1.2]">
-            Question and Answers
-          </h3>
-          <p className="mx-auto max-w-lg pt-8">
-            Listed questions and answers, all supposed to be commonly asked in
-            some context, and pertaining to a particular topic.
-          </p>
-        </div>
 
-        <Accordion
-          className="flex w-full flex-wrap justify-center gap-4"
-          allowZeroExpanded
-        >
-          <div className="w-full lg:basis-1/2">
-            {faqItems.slice(0, 3).map((items) => (
-              <AccordionItem
-                key={items.question}
-                className="border-b-[1px] border-[#7b5eea]"
-              >
-                <FAQAccordion
-                  accordionTitle={items.question}
-                  accordionItem={items.answer}
-                />
-              </AccordionItem>
-            ))}
-          </div>
-          <div className="w-full lg:basis-1/2">
-            {faqItems.slice(3, 6).map((items) => (
-              <AccordionItem
-                key={items.question}
-                className="border-b-[1px] border-[#7b5eea]"
-              >
-                <FAQAccordion
-                  accordionTitle={items.question}
-                  accordionItem={items.answer}
-                />
-              </AccordionItem>
-            ))}
-          </div>
-        </Accordion>
+          <Accordion
+            className="flex w-full flex-wrap justify-center gap-4"
+            allowZeroExpanded
+          >
+            <div className="w-full lg:basis-1/2">
+              {faqItems.slice(0, 3).map((items) => (
+                <AccordionItem
+                  key={items.question}
+                  className="border-b-[1px] border-[#7b5eea]"
+                >
+                  <FAQAccordion
+                    accordionTitle={items.question}
+                    accordionItem={items.answer}
+                  />
+                </AccordionItem>
+              ))}
+            </div>
+            <div className="w-full lg:basis-1/2">
+              {faqItems.slice(3, 6).map((items) => (
+                <AccordionItem
+                  key={items.question}
+                  className="border-b-[1px] border-[#7b5eea]"
+                >
+                  <FAQAccordion
+                    accordionTitle={items.question}
+                    accordionItem={items.answer}
+                  />
+                </AccordionItem>
+              ))}
+            </div>
+          </Accordion>
+        </MaxScreen>
       </div>
     </div>
   );

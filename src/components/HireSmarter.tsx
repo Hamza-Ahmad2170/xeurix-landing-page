@@ -13,6 +13,7 @@ import {
   AccordionItemPanel,
   AccordionItemState,
 } from "react-accessible-accordion";
+import MaxScreen from "./MaxScreen";
 
 const hireSmarterData = [
   {
@@ -68,70 +69,72 @@ export default function HireSmarter() {
   const isActive = hireSmart.find((hireSmarter) => hireSmarter.active);
 
   return (
-    <section className="flex h-screen w-full items-center justify-center">
-      <div className="container flex flex-col gap-10 text-center">
-        <Heading>Hire Smarter with Xeurix</Heading>
-        <Paragraph className="max-w-xl">
-          Unlock the full potential of your hiring process with Xeurix’s
-          advanced job simulations and data-driven hiring.
-        </Paragraph>
-        <div className="hidden gap-y-5 lg:flex">
-          <div className="w-1/2">
-            {hireSmart.map((hireSmarter) => (
-              <HireSmartItem
-                key={hireSmarter.name}
-                hireSmarter={hireSmarter}
-                onClick={() => handleHireSmart(hireSmarter.name)}
+    <section className="bg-slate-200 py-10">
+      <div className="container">
+        <MaxScreen className="text-center">
+          <Heading>Hire Smarter with Xeurix</Heading>
+          <Paragraph className="max-w-xl">
+            Unlock the full potential of your hiring process with Xeurix’s
+            advanced job simulations and data-driven hiring.
+          </Paragraph>
+          <div className="hidden gap-y-5 lg:flex">
+            <div className="w-1/2">
+              {hireSmart.map((hireSmarter) => (
+                <HireSmartItem
+                  key={hireSmarter.name}
+                  hireSmarter={hireSmarter}
+                  onClick={() => handleHireSmart(hireSmarter.name)}
+                />
+              ))}
+            </div>
+            <div className="m-auto w-1/2">
+              <Image
+                src={isActive?.svg || "/svg/Job Fit.svg"}
+                alt={isActive?.name || "Job Fit"}
+                width={70}
+                height={70}
+                className="mx-auto"
               />
-            ))}
+            </div>
           </div>
-          <div className="m-auto w-1/2">
-            <Image
-              src={isActive?.svg || "/svg/Job Fit.svg"}
-              alt={isActive?.name || "Job Fit"}
-              width={70}
-              height={70}
-              className="mx-auto"
-            />
-          </div>
-        </div>
-        <div className="w-full lg:hidden">
-          <Accordion allowZeroExpanded>
-            {hireSmart.map((item) => (
-              <AccordionItem key={item.name}>
-                <AccordionItemState>
-                  {({ expanded }) => (
-                    <>
-                      <AccordionItemHeading>
-                        <AccordionItemButton
-                          className={`px-3 py-4 text-left ${expanded ? "bg-red-500" : ""}`}
+          <div className="w-full lg:hidden">
+            <Accordion allowZeroExpanded>
+              {hireSmart.map((item) => (
+                <AccordionItem key={item.name}>
+                  <AccordionItemState>
+                    {({ expanded }) => (
+                      <>
+                        <AccordionItemHeading>
+                          <AccordionItemButton
+                            className={`px-3 py-4 text-left ${expanded ? "bg-red-500" : ""}`}
+                          >
+                            {item.name}
+                          </AccordionItemButton>
+                        </AccordionItemHeading>
+                        <AccordionItemPanel
+                          className={`block text-sm transition-[height,visible] ${expanded ? "visible h-16 px-6 py-3" : "invisible h-0"}`}
                         >
-                          {item.name}
-                        </AccordionItemButton>
-                      </AccordionItemHeading>
-                      <AccordionItemPanel
-                        className={`block text-sm transition-[height,visible] ${expanded ? "visible h-16 px-6 py-3" : "invisible h-0"}`}
-                      >
-                        <Image
-                          src={item.svg}
-                          width={70}
-                          height={70}
-                          alt=""
-                          className={`${expanded} ? 'visible h-16' : 'invisible h-0'`}
-                        />
-                      </AccordionItemPanel>
-                    </>
-                  )}
-                </AccordionItemState>
-              </AccordionItem>
-            ))}
-          </Accordion>
-        </div>
-        <div className="pt-12 text-center">
-          <button className="rounded-md bg-[#d4145a] px-6 py-[4px] text-lg text-white">
-            Get Started
-          </button>
-        </div>
+                          <Image
+                            src={item.svg}
+                            width={70}
+                            height={70}
+                            alt=""
+                            className={`${expanded} ? 'visible h-16' : 'invisible h-0'`}
+                          />
+                        </AccordionItemPanel>
+                      </>
+                    )}
+                  </AccordionItemState>
+                </AccordionItem>
+              ))}
+            </Accordion>
+          </div>
+          <div className="text-center">
+            <button className="rounded-md bg-[#d4145a] px-6 py-[4px] text-lg text-white">
+              Get Started
+            </button>
+          </div>
+        </MaxScreen>
       </div>
     </section>
   );
