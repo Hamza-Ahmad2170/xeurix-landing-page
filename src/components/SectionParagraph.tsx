@@ -9,7 +9,7 @@ export default function SectionParagraph({
 }: SectionParagraphProps) {
   return (
     <p
-      className={`${className ? className : ""} mx-auto max-[420px]:text-sm md:text-base`}
+      className={`${className ? className : ""} mx-auto max-[420px]:text-sm md:text-xl`}
     >
       {children}
     </p>

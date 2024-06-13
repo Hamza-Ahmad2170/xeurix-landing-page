@@ -9,7 +9,7 @@ export default function Partners() {
       <div className="container">
         <MaxScreen className="text-center">
           <Heading>ATS Integration Partners</Heading>
-          <Paragraph className="max-w-lg">
+          <Paragraph className="max-w-xl">
             Integrate with over 45 major applicant tracking systems to create
             seamless workflows
           </Paragraph>

@@ -3,6 +3,7 @@ import { useState } from "react";
 import BlogCard from "./BlogCard";
 import BlogSearchBar from "./BlogSearchBar";
 import blogCards from "@/json/blogs";
+import Pagination from "./Pagination";
 
 function LatestBlog() {
   const [searchTerm, setSearchTerm] = useState("");
@@ -21,6 +22,7 @@ function LatestBlog() {
             <BlogCard key={card.id} card={card} />
           ))}
         </div>
+        <Pagination />
       </div>
     </div>
   );

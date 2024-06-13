@@ -58,7 +58,7 @@ export default function Impact() {
       <div className="container">
         <MaxScreen>
           <Heading className="text-center">Why Xeurix: The Impact?</Heading>
-          <Paragraph className="max-w-3xl pt-10">
+          <Paragraph className="max-w-4xl text-center">
             Xeurix revolutionizes hiring by blending advanced AI with immersive
             3D simulations. Select below to compare traditional hiring methods
             with Xeurix’s cutting-edge approach.

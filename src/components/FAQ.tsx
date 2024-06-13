@@ -50,14 +50,14 @@ export default function FAQ() {
             <Heading className="text-5xl font-medium leading-[1.2]">
               Question and Answers
             </Heading>
-            <Paragraph className="mx-auto max-w-lg">
+            <Paragraph className="mx-auto max-w-2xl">
               Listed questions and answers, all supposed to be commonly asked in
               some context, and pertaining to a particular topic.
             </Paragraph>
           </div>
 
           <Accordion
-            className="flex w-full flex-wrap xl:flex-nowrap justify-center gap-4"
+            className="flex w-full flex-wrap justify-center gap-4 xl:flex-nowrap"
             allowZeroExpanded
           >
             <div className="w-full lg:basis-1/2">

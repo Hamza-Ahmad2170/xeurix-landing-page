@@ -9,7 +9,7 @@ export default function SectionHeading({
 }: SectionHeadingProps) {
   return (
     <h2
-      className={`${className ? className : ""} w-full text-4xl font-bold max-[420px]:text-[1.2rem]`}
+      className={`${className ? className : ""} w-full text-[3.5rem] font-bold max-[420px]:text-[1.2rem]`}
     >
       {children}
     </h2>

@@ -10,7 +10,7 @@ export default function Seeing() {
       <div className="container">
         <MaxScreen className="text-center">
           <Heading>Seeing is believing</Heading>
-          <Paragraph className="max-w-xl">
+          <Paragraph className="max-w-[40.6rem]">
             With Xeurix’s life-like{" "}
             <span className="font-semibold text-[#d4145a]">
               {" "}
