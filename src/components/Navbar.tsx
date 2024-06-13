@@ -1,15 +1,17 @@
 "use client";
-import { useState } from "react";
+
 import Link from "next/link";
-import DemoSvg from "./svg/Demo.svg";
-import { MdOutlineKeyboardArrowDown } from "react-icons/md";
+import { useState } from "react";
 
 import XeurixLogo from "./svg/XeurixLogo.svg";
-import NavLinks from "./NavLinks";
-import NavDropdown from "./NavDropdown";
 import NavBarToggle from "./NavBarToggle";
+import DemoSvg from "./svg/Demo.svg";
+import NavDropdown from "./NavDropdown";
+import { usePathname } from "next/navigation";
 
-const navLinks = [
+import NavLinks from "./NavLinks";
+
+const homeNavLinks = [
   "products",
   "Assessment",
   "By Industry",
@@ -18,37 +20,59 @@ const navLinks = [
   "FAQs",
 ];
 
-export default function NavBar() {
-  const [isToggleOpen, setIsToggleOpen] = useState(false);
-  return (
-    <header className="bg-[#001b27] py-3 text-white xl:py-0 ">
-      <nav className="container justify-between xl:flex ">
-        <div className="flex items-center justify-between">
-          <Link href="/">
-            <XeurixLogo />
-          </Link>
+const otherNavLinks = [
+  {
+    name: "Home",
+    path: "/",
+  },
+  {
+    name: "Contact us",
+    path: "/contact-us",
+  },
+  {
+    name: "Blogs",
+    path: "/blogs",
+  },
+];
 
-          <NavBarToggle
-            isToggleOpen={isToggleOpen}
-            setIsToggleOpen={setIsToggleOpen}
-          />
-        </div>
-        <ul
-          className={` transition-[visibility]  xl:visible  ${
-            isToggleOpen ? "visible block" : "hidden"
-          } xl:flex`}
+function NavBar() {
+  const [isOpen, setIsOpen] = useState(false);
+  const pathName = usePathname();
+
+  return (
+    <header className="relative z-50 bg-[#001b27] py-3 text-white xl:py-0">
+      <nav className="container flex items-center justify-between">
+        <Link href={"/"}>
+          <XeurixLogo />
+        </Link>
+
+        <NavBarToggle isOpen={isOpen} setIsOpen={setIsOpen} />
+
+        <div
+          className={`absolute left-0 right-0 -z-10 grow justify-center bg-[#001b27] opacity-100 transition-[top] duration-300 ease-in xl:static xl:z-10 xl:flex xl:min-h-max ${isOpen ? "top-full" : "-top-80 opacity-0"}`}
         >
-          {navLinks.map((link) => (
-            <NavLinks key={link} link={link} />
-          ))}
-          <li className="group relative z-50 px-4 py-3 xl:py-5">
-            <button className="flex cursor-default items-center  duration-500 hover:text-[#d4145a]">
-              dropdown
-              <MdOutlineKeyboardArrowDown className="group-hover:rotate-180" />
-            </button>
+          <ul className="container min-h-64 items-center justify-center xl:flex xl:min-h-max">
+            {pathName === "/" &&
+              homeNavLinks.map((link) => (
+                <li key={link}>
+                  <NavLinks link={link} />
+                </li>
+              ))}
+
+            {pathName !== "/" &&
+              otherNavLinks.map((link) => (
+                <li key={link.name}>
+                  <Link
+                    href={link.path}
+                    className="block py-3 transition-all duration-500 hover:text-[#d4145a] xl:px-4 xl:py-5"
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
             <NavDropdown />
-          </li>
-        </ul>
+          </ul>
+        </div>
 
         <ul className="hidden items-center xl:flex">
           <li>
@@ -59,7 +83,7 @@ export default function NavBar() {
           <li>
             <Link
               href={"/demo"}
-              className="flex items-center justify-between gap-2 rounded-full bg-[#d4145a]  px-5 py-2"
+              className="flex items-center justify-between gap-2 rounded-full bg-[#d4145a] px-5 py-2"
             >
               <DemoSvg />
               Request Demo
@@ -70,3 +94,5 @@ export default function NavBar() {
     </header>
   );
 }
+
+export default NavBar;

@@ -28,7 +28,11 @@ export default function FAQAccordion({
               </AccordionItemButton>
             </AccordionItemHeading>
             <AccordionItemPanel
-              className={`text-sm transition-[height,visible] ${expanded ? "visible h-14 px-6 py-3" : "invisible h-0"}`}
+              className={`grid overflow-hidden transition-[opacity,grid,height] duration-500 ease-out ${
+                expanded
+                  ? `min-h-16 grid-rows-[1fr] px-6 py-3 opacity-100`
+                  : "h-0 grid-rows-[0fr] opacity-0"
+              }`}
             >
               {accordionItem}
             </AccordionItemPanel>

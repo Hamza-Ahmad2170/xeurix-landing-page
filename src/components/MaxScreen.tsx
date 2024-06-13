@@ -7,7 +7,7 @@ type MaxScreenProps = {
 export default function MaxScreen({ children, className }: MaxScreenProps) {
   return (
     <div
-      className={`flex w-full flex-col items-center justify-center gap-10 py-10 xl:h-dvh xl:py-0 ${className}`}
+      className={`flex min-h-dvh w-full flex-col items-center justify-center gap-10 py-10 ${className}`}
     >
       {children}
     </div>

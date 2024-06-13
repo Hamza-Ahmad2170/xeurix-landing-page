@@ -29,7 +29,7 @@ export default function Seeing() {
             className="mx-auto cursor-pointer"
             quality={60}
           />
-          <p className="flex items-center justify-center gap-4 text-xl text-blue-500">
+          <p className="flex items-center justify-center gap-4 pt-20 text-xl text-blue-500">
             Platform Overview <ImArrowRight color="rgb(63 131 248)" />
           </p>
         </MaxScreen>

@@ -5,7 +5,7 @@ export default function Page() {
     <div className="bg-white bg-[url('/img/gameBackground.webp')] bg-cover">
       <MaxScreen>
         <div className="w-full max-w-[500px] rounded-md bg-white p-12 text-sm">
-          <h1 className="mb-4 text-3xl font-medium">Request demo</h1>
+          <h1 className="mb-6 text-[1.75rem] font-semibold">Request demo</h1>
           <form className="space-y-8">
             <div>
               <label

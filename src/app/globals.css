@@ -3,11 +3,12 @@
 @tailwind utilities;
 
 .job-fit {
-  background: linear-gradient(to left, #e2cff4, #ebe0e0);
+  background: linear-gradient(to left, rgba(226, 207, 244, 0.8), rgba(235, 224, 224, 1));
 }
 
 .WaveWrapper {
   height: 5%;
+  min-height: 50px;
   opacity: 1;
   width: 100%;
   position: absolute;

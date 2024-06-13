@@ -34,15 +34,15 @@ const platformItems = [
 const legalItems = [
   {
     name: "Terms of use",
-    path: "/terms",
+    path: "/termsofuse",
   },
   {
     name: "Privacy policy",
-    path: "/privacy",
+    path: "/privacypolicy",
   },
   {
     name: "Cookies policy",
-    path: "/cookies",
+    path: "/cookiespolicy",
   },
 ];
 
@@ -59,7 +59,7 @@ export default function Footer() {
                 placeholder="Enter your email"
                 name="email"
                 id="email"
-                className="block w-full rounded-md border-0 bg-[rgba(41,171,226,.5)] px-4 py-3 text-sm placeholder:text-black focus:border-transparent focus:shadow-lg focus:outline-none focus:ring-2 focus:ring-[rgba(41,171,226,.25)]"
+                className="block w-full rounded-md border-0 bg-[rgba(41,171,226,.5)] px-4 py-3 text-sm placeholder:font-extralight placeholder:text-black focus:border-transparent focus:shadow-lg focus:outline-none focus:ring-2 focus:ring-[rgba(41,171,226,.25)]"
               />
               <button
                 type="button"
