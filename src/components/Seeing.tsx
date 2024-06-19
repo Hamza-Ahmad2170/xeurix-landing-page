@@ -7,7 +7,7 @@ import MaxScreen from "./MaxScreen";
 export default function Seeing() {
   return (
     <section className="bg-[#e4f4fb] py-8">
-      <div className="container">
+      <div className="container bg-[url('/img/pattern1.webp')] bg-cover bg-no-repeat">
         <MaxScreen className="text-center">
           <Heading>Seeing is believing</Heading>
           <Paragraph className="max-w-[40.6rem]">

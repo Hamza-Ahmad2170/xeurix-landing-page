@@ -5,6 +5,7 @@ import Impact from "@/components/Impact";
 import JobFit from "@/components/JobFit";
 import JobRoles from "@/components/JobRoles";
 import Partners from "@/components/Partners";
+
 import Seeing from "@/components/Seeing";
 import Simulations from "@/components/Simulations";
 

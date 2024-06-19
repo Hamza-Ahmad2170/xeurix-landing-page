@@ -15,8 +15,6 @@ const useSubmit = () => {
       if (!res.ok) {
         throw new Error("Something went wrong");
       }
-      const data = await res.json();
-      console.log(data);
     } catch (error) {
       if (error instanceof Error) {
         setError(error);

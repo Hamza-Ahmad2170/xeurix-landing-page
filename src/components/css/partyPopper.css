@@ -1,0 +1,147 @@
+.PartyPopperWrapper {
+  z-index: 20;
+  display: none;
+  position: absolute;
+  left: 0%;
+  width: 100vw;
+  top: 0px;
+  height: 100%;
+}
+.PartyPopperWrapper.showMypopper {
+  display: block !important;
+  position: fixed !important;
+}
+.PartyPopperWrapper .leftCanon {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0%;
+  transform: rotateZ(45deg);
+  transform-origin: 50% 100%;
+  z-index: 10;
+}
+.PartyPopperWrapper .rightCanon {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  right: 0%;
+  transform: rotateZ(-45deg);
+  transform-origin: 50% 100%;
+  z-index: 10;
+}
+.PartyPopperWrapper .cannon {
+  height: 170vh;
+  width: 1px;
+  opacity: 0;
+  position: relative;
+  transform-origin: 50% 100%;
+  animation: cannon-explosion 2s cubic-bezier(0.18, 0.89, 0.32, 1.28) both;
+  animation-iteration-count: 1;
+  animation-delay: 0s;
+}
+.PartyPopperWrapper .cannon__path {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  transform-origin: 50% 100%;
+  padding-bottom: 30%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
+}
+.PartyPopperWrapper .cannon__path--lg {
+  height: 100%;
+}
+.PartyPopperWrapper .cannon__path--md {
+  height: 95%;
+}
+.PartyPopperWrapper .cannon__path--sm {
+  height: 90%;
+}
+.PartyPopperWrapper .cannon__path--angle-2 {
+  transform: rotate(-35deg);
+}
+.PartyPopperWrapper .cannon__path--angle-1 {
+  transform: rotate(-15deg);
+}
+.PartyPopperWrapper .cannon__path--angle1 {
+  transform: rotate(15deg);
+}
+.PartyPopperWrapper .cannon__path--angle2 {
+  transform: rotate(35deg);
+}
+.PartyPopperWrapper .cannon__confetti {
+  flex: 0 1 auto;
+  animation-duration: 2s;
+  animation-delay: 0s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: both;
+  animation-iteration-count: 1;
+}
+.PartyPopperWrapper .cannon__confetti:nth-child(even) {
+  animation-name: confetti-rotate-l;
+}
+.PartyPopperWrapper .cannon__confetti:nth-child(odd) {
+  animation-name: confetti-rotate-r;
+}
+.PartyPopperWrapper .cannon__confetti--ribbon {
+  height: 1em;
+  width: 0.5em;
+  border-radius: 0.1em;
+}
+.PartyPopperWrapper .cannon__confetti--flake {
+  height: 0.5em;
+  width: 0.5em;
+  border-radius: 50%;
+}
+.PartyPopperWrapper .cannon__confetti--color-1 {
+  background-color: #feb535;
+}
+.PartyPopperWrapper .cannon__confetti--color-2 {
+  background-color: #bea4ff;
+}
+.PartyPopperWrapper .cannon__confetti--color-3 {
+  background-color: #ff6e83;
+}
+.PartyPopperWrapper .cannon__confetti--color-4 {
+  background-color: #58cafe;
+}
+
+@keyframes cannon-explosion {
+  0% {
+    transform: scale(0);
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes confetti-rotate-l {
+  0% {
+    transform: rotate(0) scaleY(1);
+  }
+  50% {
+    transform: rotate(2turn) scaleY(1.5);
+  }
+  100% {
+    transform: rotate(2.05turn) scaleY(1);
+  }
+}
+
+@keyframes confetti-rotate-r {
+  0% {
+    transform: rotate(0) scaleY(1);
+  }
+  50% {
+    transform: rotate(-2turn) scaleY(1.5);
+  }
+  100% {
+    transform: rotate(-2.05turn) scaleY(1);
+  }
+}

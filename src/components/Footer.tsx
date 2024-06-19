@@ -4,6 +4,7 @@ import { FaLinkedin } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
 import { FaFacebookF } from "react-icons/fa";
 import FooterInput from "./FooterInput";
+import PartyPopper from "./PartyPopper";
 
 const platformItems = [
   {
