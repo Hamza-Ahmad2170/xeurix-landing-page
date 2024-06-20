@@ -40,57 +40,59 @@ function NavBar() {
   const pathName = usePathname();
 
   return (
-    <header className="relative z-50 bg-[#001b27] py-3 text-white xl:py-0">
-      <nav className="container flex items-center justify-between">
-        <Link href={"/"}>
-          <XeurixLogo />
-        </Link>
+    <header className="sticky top-0 z-50 bg-[#001b27] py-3 text-white xl:py-0">
+      <div className="relative">
+        <nav className="container flex items-center justify-between">
+          <Link href={"/"}>
+            <XeurixLogo />
+          </Link>
 
-        <NavBarToggle isOpen={isOpen} setIsOpen={setIsOpen} />
+          <NavBarToggle isOpen={isOpen} setIsOpen={setIsOpen} />
 
-        <div
-          className={`absolute left-0 right-0 -z-10 grow justify-center bg-[#001b27] opacity-100 transition-[top] duration-300 ease-in xl:static xl:z-10 xl:flex xl:min-h-max ${isOpen ? "top-full" : "-top-80 opacity-0"}`}
-        >
-          <ul className="container min-h-64 items-center justify-center xl:flex xl:min-h-max">
-            {pathName === "/" &&
-              homeNavLinks.map((link) => (
-                <li key={link}>
-                  <NavLinks link={link} />
-                </li>
-              ))}
+          <div
+            className={`absolute left-0 right-0 -z-10 grow justify-center bg-[#001b27] opacity-100 transition-[top] duration-300 ease-in xl:static xl:z-10 xl:flex xl:min-h-max ${isOpen ? "top-full" : "-top-80 opacity-0"}`}
+          >
+            <ul className="container min-h-64 items-center justify-center xl:flex xl:min-h-max">
+              {pathName === "/" &&
+                homeNavLinks.map((link) => (
+                  <li key={link}>
+                    <NavLinks link={link} />
+                  </li>
+                ))}
 
-            {pathName !== "/" &&
-              otherNavLinks.map((link) => (
-                <li key={link.name}>
-                  <Link
-                    href={link.path}
-                    className="block py-3 transition-all duration-500 hover:text-[#d4145a] xl:px-4 xl:py-5"
-                  >
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
-            <NavDropdown />
+              {pathName !== "/" &&
+                otherNavLinks.map((link) => (
+                  <li key={link.name}>
+                    <Link
+                      href={link.path}
+                      className="block py-3 transition-all duration-500 hover:text-[#d4145a] xl:px-4 xl:py-5"
+                    >
+                      {link.name}
+                    </Link>
+                  </li>
+                ))}
+              <NavDropdown />
+            </ul>
+          </div>
+
+          <ul className="hidden items-center xl:flex">
+            <li>
+              <Link href={"/login"} className="px-4 py-5">
+                Login
+              </Link>
+            </li>
+            <li>
+              <Link
+                href={"/demo"}
+                className="flex items-center justify-between gap-2 rounded-full bg-[#d4145a] px-5 py-2"
+              >
+                <DemoSvg />
+                Request Demo
+              </Link>
+            </li>
           </ul>
-        </div>
-
-        <ul className="hidden items-center xl:flex">
-          <li>
-            <Link href={"/login"} className="px-4 py-5">
-              Login
-            </Link>
-          </li>
-          <li>
-            <Link
-              href={"/demo"}
-              className="flex items-center justify-between gap-2 rounded-full bg-[#d4145a] px-5 py-2"
-            >
-              <DemoSvg />
-              Request Demo
-            </Link>
-          </li>
-        </ul>
-      </nav>
+        </nav>
+      </div>
     </header>
   );
 }

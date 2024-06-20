@@ -1,5 +1,3 @@
-import type { Config } from "tailwindcss";
-
 const config = {
   content: [
     "./pages/**/*.{ts,tsx}",
@@ -22,7 +20,7 @@ const config = {
     },
     extend: {},
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [],
 };
 
 export default config;
