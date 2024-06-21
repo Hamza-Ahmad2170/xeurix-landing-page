@@ -50,9 +50,10 @@ function FooterInput() {
           placeholder="Enter your email"
           name="email"
           id="email"
-          className="block w-full rounded-md border-0 bg-[rgba(41,171,226,.5)] px-4 py-3 text-sm placeholder:font-extralight placeholder:text-black focus:border-transparent focus:shadow-lg focus:outline-none focus:ring-2 focus:ring-[rgba(41,171,226,.25)]"
+          className="focus: block w-full rounded-md border-0 bg-[rgba(41,171,226,.5)] px-4 py-3 text-sm placeholder:font-light placeholder:text-black focus:border-0 focus:shadow-lg focus:shadow-[#29abe240] focus-visible:shadow-lg focus-visible:shadow-[#29abe240] focus-visible:outline-none focus-visible:outline-[#29abe240]"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
+          pattern="/[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/g"
         />
         <button
           type="submit"

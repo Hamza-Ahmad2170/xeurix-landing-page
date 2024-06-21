@@ -5,7 +5,7 @@ import MaxScreen from "./MaxScreen";
 
 export default function Partners() {
   return (
-    <div className="bg-[#eeebed] bg-[url('/img/pattern2.webp')]">
+    <div className="bg-[#eeebed] bg-[url('/img/pattern2.webp')] bg-cover bg-no-repeat">
       <div className="container">
         <MaxScreen className="text-center">
           <Heading>ATS Integration Partners</Heading>

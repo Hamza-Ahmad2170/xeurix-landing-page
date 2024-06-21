@@ -33,29 +33,31 @@ export default function JobRoles() {
 
   return (
     <div className="bg-[#e4f4fb] py-20">
-      <div className="container">
-        <MaxScreen className="text-center">
-          <Heading>Job Roles</Heading>
-          <Paragraph className="max-w-xl">
-            Our platform is designed to meet the needs for virtually any job
-            role from entry level to senior leadership role.
-          </Paragraph>
-          <div className="flex w-full flex-wrap justify-center">
-            {jobRoles.map((job) => (
-              <div className="p-4 text-center lg:basis-40" key={job.name}>
-                <Image
-                  src={job.image}
-                  alt={job.name}
-                  width={100}
-                  height={100}
-                  className="mx-auto rounded-lg"
-                />
-                <p className="py-3 font-bold">{job.name}</p>
-              </div>
-            ))}
-          </div>
-          <p className="font-bold">And many more</p>
-        </MaxScreen>
+      <div className="bg-[url('/img/Features.webp')] bg-contain bg-center bg-no-repeat">
+        <div className="container">
+          <MaxScreen className="text-center">
+            <Heading>Job Roles</Heading>
+            <Paragraph className="max-w-xl">
+              Our platform is designed to meet the needs for virtually any job
+              role from entry level to senior leadership role.
+            </Paragraph>
+            <div className="flex w-full flex-wrap justify-center">
+              {jobRoles.map((job) => (
+                <div className="p-4 text-center lg:basis-40" key={job.name}>
+                  <Image
+                    src={job.image}
+                    alt={job.name}
+                    width={100}
+                    height={100}
+                    className="mx-auto rounded-lg"
+                  />
+                  <p className="py-3 font-bold">{job.name}</p>
+                </div>
+              ))}
+            </div>
+            <p className="font-bold">And many more</p>
+          </MaxScreen>
+        </div>
       </div>
     </div>
   );

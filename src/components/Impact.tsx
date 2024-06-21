@@ -54,7 +54,7 @@ export default function Impact() {
   };
 
   return (
-    <div className="py-20">
+    <div className="bg-[url('/img/parallax-4.webp')] bg-cover bg-center bg-no-repeat py-20">
       <div className="container">
         <MaxScreen>
           <Heading className="text-center">Why Xeurix: The Impact?</Heading>

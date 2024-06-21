@@ -77,9 +77,9 @@ function NavBar() {
 
           <ul className="hidden items-center xl:flex">
             <li>
-              <Link href={"/login"} className="px-4 py-5">
+              <a href="https://app.xeurix.com/" className="px-4 py-5">
                 Login
-              </Link>
+              </a>
             </li>
             <li>
               <Link
