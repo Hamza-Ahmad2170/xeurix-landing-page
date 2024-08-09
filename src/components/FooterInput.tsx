@@ -1,6 +1,6 @@
 "use client";
 
-import submit from "@/utils/submit";
+import submit from "@/lib/submit";
 import { useState } from "react";
 import PartyPopper from "./PartyPopper";
 import { toast } from "react-toastify";

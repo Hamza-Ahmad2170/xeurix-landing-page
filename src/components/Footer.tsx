@@ -50,7 +50,7 @@ const legalItems = [
 
 export default function Footer() {
   return (
-    <footer className="bg-footer bg-[url('/img/parallax.webp')]">
+    <footer className="bg-footer bg-[url('/images/parallax.webp')]">
       <div className="container py-28">
         <div className="flex flex-wrap justify-between gap-y-10">
           <div className="w-full max-w-md">

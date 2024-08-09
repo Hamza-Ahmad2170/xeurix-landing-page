@@ -1,3 +1,5 @@
+import { cn } from "@/lib/utils";
+
 type MaxScreenProps = {
   children: React.ReactNode;
 
@@ -7,7 +9,10 @@ type MaxScreenProps = {
 export default function MaxScreen({ children, className }: MaxScreenProps) {
   return (
     <div
-      className={`flex min-h-dvh w-full flex-col items-center justify-center gap-10 py-10 ${className}`}
+      className={cn(
+        "flex min-h-dvh w-full flex-col items-center justify-center",
+        className,
+      )}
     >
       {children}
     </div>

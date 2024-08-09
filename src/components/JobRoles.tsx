@@ -1,6 +1,6 @@
 import Image from "next/image";
-import Heading from "./SectionHeading";
-import Paragraph from "./SectionParagraph";
+import Heading from "./Heading";
+import Paragraph from "./Paragraph";
 import MaxScreen from "./MaxScreen";
 
 export default function JobRoles() {
@@ -33,9 +33,9 @@ export default function JobRoles() {
 
   return (
     <div className="bg-[#e4f4fb] py-20">
-      <div className="bg-[url('/img/Features.webp')] bg-contain bg-center bg-no-repeat">
+      <div>
         <div className="container">
-          <MaxScreen className="text-center">
+          <MaxScreen className="gap-10 text-center">
             <Heading>Job Roles</Heading>
             <Paragraph className="max-w-xl">
               Our platform is designed to meet the needs for virtually any job

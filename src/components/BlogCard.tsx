@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import cardImg from "@/assets/images/bigger-worlds.webp";
+import cardImg from "../../public/images/bigger-worlds.webp";
 
 type BlogCardProps = {
   card: {

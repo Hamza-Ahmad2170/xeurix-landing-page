@@ -1,8 +1,8 @@
 "use client";
 import React from "react";
 import { Accordion, AccordionItem } from "react-accessible-accordion";
-import Paragraph from "./SectionParagraph";
-import Heading from "./SectionHeading";
+import Paragraph from "./Paragraph";
+import Heading from "./Heading";
 import FAQAccordion from "./FAQAccordion";
 import MaxScreen from "./MaxScreen";
 
@@ -42,7 +42,7 @@ export default function FAQ() {
   return (
     <div className="bg-[#f4f5f7] py-10">
       <div className="container">
-        <MaxScreen>
+        <MaxScreen className="gap-10">
           <div className="relative space-y-5 text-center">
             <div className="absolute bottom-1/2 z-10 w-full text-center text-[10rem] font-bold leading-6 text-[#29abe2] opacity-10">
               FAQ

@@ -1,3 +1,5 @@
+import type { Config } from "tailwindcss";
+
 const config = {
   content: [
     "./pages/**/*.{ts,tsx}",
@@ -10,17 +12,14 @@ const config = {
     container: {
       center: true,
       padding: "1rem",
-      screens: {
-        sm: "576px",
-        md: "768px",
-        lg: "992px",
-        xl: "1200px",
-        "2xl": "1400px",
+    },
+    extend: {
+      fontFamily: {
+        arial: ["var(--font-arial)"],
       },
     },
-    extend: {},
   },
-  plugins: [],
-};
+  plugins: [require("tailwindcss-animate")],
+} satisfies Config;
 
 export default config;

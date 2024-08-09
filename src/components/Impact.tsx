@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
-import Heading from "./SectionHeading";
-import Paragraph from "./SectionParagraph";
+import Heading from "./Heading";
+import Paragraph from "./Paragraph";
 import CountUp from "react-countup";
 import { useInView } from "react-intersection-observer";
 import MaxScreen from "./MaxScreen";
