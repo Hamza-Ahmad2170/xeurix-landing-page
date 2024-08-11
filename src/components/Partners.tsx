@@ -13,7 +13,7 @@ const partners = [
 
 export default function Partners() {
   return (
-    <div className="bg-[#eeebed]">
+  <div className="bg-[#eeebed]">
       <div className="container">
         <MaxScreen className="text-center">
           <Heading>ATS Integration Partners</Heading>

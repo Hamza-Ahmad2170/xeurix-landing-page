@@ -3,7 +3,7 @@
 // import submit from "@/lib/submit";
 import { useState } from "react";
 import PartyPopper from "./PartyPopper";
-import { toast } from "react-toastify";
+// import { toast } from "react-toastify";
 
 function FooterInput() {
   const [email, setEmail] = useState("");
