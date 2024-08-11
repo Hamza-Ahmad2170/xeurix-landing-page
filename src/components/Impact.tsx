@@ -10,30 +10,86 @@ const impactData = [
   {
     title: "Manual Evaluation",
     content:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nesciunt qui explicabo soluta cum magni, cupiditate quis optio consequatur totam sapiente!",
-    numbers: [10, 20, 30],
+      "Manual evaluation rely on human intuition and manual processes to evaluate candidates. This traditional method involves reviewing resumes, conducting interviews, and making subjective decisions.",
+    numbers: [0, 0, 0],
+    subHeading: [
+      {
+        title: "Time Saved",
+        text: "Limited time savings due to extensive manual processes.",
+      },
+      {
+        title: "Employee Retention",
+        text: "Lower retention rates due to potential biases and less accurate job fit assessments",
+      },
+      {
+        title: "Employee Productivity",
+        text: "Productivity may suffer due to less precise candidate-job matches.",
+      },
+    ],
     active: true,
   },
   {
-    title: "ATS/Resume Matching",
+    title: "Resume Matching",
     content:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nesciunt qui explicabo soluta cum magni, cupiditate quis optio consequatur totam sapiente!",
-    numbers: [40, 50, 60],
+      "Resume screening involves filtering candidates based on their resumes. It uses keyword matching and basic criteria to shortlist applicants but may miss key skills and potential.",
+    numbers: [25, 10, 10],
     active: true,
+    subHeading: [
+      {
+        title: "Time Saved",
+        text: "Moderate time savings through automated keyword filtering.",
+      },
+      {
+        title: "Employee Retention",
+        text: "Retention rates are variable; may not accurately reflect candidate suitability beyond keywords.",
+      },
+      {
+        title: "Employee Productivity",
+        text: "Productivity can be impacted by overlooking soft skills and real-world capabilities",
+      },
+    ],
   },
   {
     title: "Assessment Tools",
     content:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nesciunt qui explicabo soluta cum magni, cupiditate quis optio consequatur totam sapiente!",
-    numbers: [70, 80, 90],
+      "Other assessments include psychometric tests, aptitude tests, and standardized assessments. These tools offer additional insights but may not fully capture practical job performance.",
+    numbers: [30, 15, 15],
     active: true,
+    subHeading: [
+      {
+        title: "Time Saved",
+        text: "Moderate time savings with structured assessment tools.",
+      },
+      {
+        title: "Employee Retention",
+        text: "Improved retention rates compared to manual assessments but still limited by test scope.",
+      },
+      {
+        title: "Employee Productivity",
+        text: "Productivity gains are moderate, depending on the alignment of test results with job demands",
+      },
+    ],
   },
   {
     title: "Xeurix Platform",
     content:
       "The pinnacle of hiring technology, using AI-driven simulations that place candidates in realistic job scenarios, providing objective and detailed performance evaluations, customizable by employers.",
-    numbers: [100, 110, 120],
+    numbers: [50, 30, 30],
     active: true,
+    subHeading: [
+      {
+        title: "Time Saved",
+        text: "Up to 50% time saved through efficient and accurate assessments.",
+      },
+      {
+        title: "Employee Retention",
+        text: "Up to 30% improvement in employee retention by ensuring precise job fit.",
+      },
+      {
+        title: "Employee Productivity",
+        text: "Up to 20% boost in productivity with candidates accurately assessed for their roles.",
+      },
+    ],
   },
 ];
 
@@ -54,7 +110,7 @@ export default function Impact() {
   };
 
   return (
-    <div className="bg-[url('/img/parallax-4.webp')] bg-cover bg-center bg-no-repeat py-20">
+    <div className="bg-[url('/images/parallax-4.jpg')] bg-cover bg-center bg-no-repeat py-20">
       <div className="container">
         <MaxScreen>
           <Heading className="text-center">Why Xeurix: The Impact?</Heading>
@@ -63,32 +119,34 @@ export default function Impact() {
             3D simulations. Select below to compare traditional hiring methods
             with Xeurix’s cutting-edge approach.
           </Paragraph>
-          <div className="mx-auto max-w-[52rem] pt-10">
+          <div className="mx-auto max-w-5xl pt-10">
             <ul className="flex justify-between rounded-md bg-slate-600/20">
               {impactData.map((data, index) => (
-                <button
+                <li
                   key={index}
                   onClick={() => handleTabChange(index)}
-                  className={`relative basis-1/2 rounded-md py-2 text-[.60rem] md:text-base ${
+                  className={`md:text-bas relative basis-1/2 rounded-md py-2 text-center ${
                     activeTabIndex === index ? "bg-[#d4145a] text-white" : ""
                   }`}
                 >
-                  {activeTabIndex === index && (
-                    <span className="absolute left-[45%] top-full h-0 w-0 border-x-8 border-t-[16px] border-x-transparent border-t-[#d4145a]"></span>
-                  )}
-                  {data.title}
-                </button>
+                  <button>
+                    {activeTabIndex === index && (
+                      <span className="absolute left-[45%] top-full h-0 w-0 border-x-8 border-t-[16px] border-x-transparent border-t-[#d4145a]"></span>
+                    )}
+                    {data.title}
+                  </button>
+                </li>
               ))}
             </ul>
             <div className="py-4">
               <p>{impactData[activeTabIndex].content}</p>
             </div>
             <div
-              className="flex flex-wrap justify-center gap-y-20 py-6 md:flex-row md:justify-between"
+              className="flex flex-wrap justify-center gap-x-4 gap-y-20 py-6 md:flex-row md:justify-between"
               ref={ref}
             >
               {impactData[activeTabIndex].numbers.map((num, index) => (
-                <div key={index} className="m-auto w-48 text-center">
+                <div key={index} className="w-80 text-center">
                   {inView && (
                     <CountUp
                       start={
@@ -103,8 +161,10 @@ export default function Impact() {
                     />
                   )}
                   <span className="text-4xl font-semibold">%</span>
-                  <p className="py-4 text-xl font-semibold">Time Saved</p>
-                  <p>Relies heavily on human intuition and manual processes,</p>
+                  <p className="py-4 text-xl font-semibold">
+                    {impactData[activeTabIndex].subHeading[index].title}
+                  </p>
+                  <p>{impactData[activeTabIndex].subHeading[index].text}</p>
                 </div>
               ))}
             </div>

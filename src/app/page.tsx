@@ -1,13 +1,13 @@
-import Collaborate from "@/components/Collaborate";
-import FAQ from "@/components/FAQ";
-import Footer from "@/components/Footer";
-import HireSmarter from "@/components/HireSmarter";
-import Impact from "@/components/Impact";
 import JobFit from "@/components/JobFit";
+import Seeing from "@/components/Seeing";
+import HireSmarter from "@/components/HireSmarter";
+import Platform from "@/components/Platform";
+import Impact from "@/components/Impact";
+import Collaborate from "@/components/Collaborate";
 import JobRoles from "@/components/JobRoles";
 import Partners from "@/components/Partners";
-import Platform from "@/components/Platform";
-import Seeing from "@/components/Seeing";
+import FAQ from "@/components/FAQ";
+import Footer from "@/components/Footer";
 
 export default function HomePage() {
   return (

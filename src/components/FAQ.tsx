@@ -8,33 +8,34 @@ import MaxScreen from "./MaxScreen";
 
 const faqItems = [
   {
-    question: "What is a 3D gamified assessment?",
+    question: "What is Xeurix?",
     answer:
-      "Our 3D gamified assessments use 3D graphics that simulate being on the job as much as possible",
+      "Xeurix is an advanced hiring platform that uses AI-powered 3D job simulations to evaluate candidates based on real-world scenarios, ensuring the best job and cultural fit.",
   },
   {
-    question: "How is Xeurix different from other assessments?",
+    question: "How does Xeurix improve the hiring process?",
     answer:
-      "Unlike other assessments, we don’t just rely on self reports via multiple choice questions, or abstract games. We look at how candidates perform in real life situations- and in multiple scenarios.",
+      "Xeurix enhances hiring by providing objective, data-driven insights into candidates' skills and fit. Our simulations replicate real job tasks, allowing you to assess true performance rather than relying on resumes or interviews alone.",
   },
   {
-    question: "Do candidates need to install the game?",
-    answer: "No, candidates can access Xeurix via web browser.",
+    question: " Can Xeurix be customized for any job role?",
+    answer:
+      "Yes, Xeurix offers hyper-customized simulations tailored to your specific job roles and organizational culture. Our AI matches your job requirements with relevant scenarios to create an accurate assessment.",
   },
   {
-    question: "How does Xeurix measure candidates’ abilities?",
+    question: "How does Xeurix ensure fairness in hiring?",
     answer:
-      "Xeurix measures candidates’ key traits and abilities from multiple data points. This means we analyze everything from behavioral data to direct skillsets and natural conversations to ensure our conclusions are as fair and accurate as possible.",
+      "Xeurix eliminates bias by focusing on measurable performance metrics instead of subjective judgment. Each candidate is evaluated equally based on how they perform in realistic job scenarios.",
   },
   {
-    question: "Is the game customizable?",
+    question: "How long does it take to implement Xeurix?",
     answer:
-      "Yes! Recruiters and hiring managers can decide which aspects are most important to measure and build their own tasks.",
+      "Xeurix is quick to set up and can be integrated into your hiring process in just a few days. We offer support throughout the implementation to ensure a smooth transition.",
   },
   {
-    question: "Can recruiters an hiring mangers collaborate?",
+    question: "What kind of support do you offer after implementation?",
     answer:
-      "Yes. Recruiters and hiring managers each have a dashboard from which they can collaborate.",
+      "We provide ongoing support, including updates, training, and customization services to ensure Xeurix continues to meet your evolving hiring needs.",
   },
 ];
 
