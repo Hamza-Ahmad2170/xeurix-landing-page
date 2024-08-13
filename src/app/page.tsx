@@ -1,5 +1,5 @@
 import JobFit from "@/components/JobFit";
-import Wave from "@/components/Wave";
+
 import Seeing from "@/components/Seeing";
 import HireSmarter from "@/components/HireSmarter";
 
@@ -14,7 +14,7 @@ export default function Home() {
   return (
     <main className="font-arial">
       <JobFit />
-      <Wave />
+
       <Seeing />
       <HireSmarter />
       <Platform />

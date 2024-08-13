@@ -2,10 +2,11 @@ import Heading from "./Heading";
 import MaxScreen from "./MaxScreen";
 import Paragraph from "./Paragraph";
 import SectionHeader from "./SectionHeader";
+import Wave from "./Wave";
 
 export default function Seeing() {
   return (
-    <section className="bg-[#e0f2fb]">
+    <section className="bg-[#e0f2fb] relative overflow-x-clip">
       <div className="max-w-6xl mx-auto px-8">
         <MaxScreen>
           <SectionHeader>
@@ -25,6 +26,7 @@ export default function Seeing() {
           </video>
         </MaxScreen>
       </div>
+      <Wave />
     </section>
   );
 }

@@ -4,7 +4,8 @@
   opacity: 1;
   width: 100%;
   position: absolute;
-  bottom: 0;
+  /* bottom: 0; */
+  top: 0;
   left: 0;
   background: #e0f2fb;
   z-index: 1;
@@ -24,8 +25,7 @@
 
 .WaveWrapper .wave:nth-of-type(2) {
   top: -56px;
-  animation:
-    wave 20s cubic-bezier(0.36, 0.45, 0.63, 0.53) -0.125s infinite,
+  animation: wave 20s cubic-bezier(0.36, 0.45, 0.63, 0.53) -0.125s infinite,
     swell 7s ease -1.25s infinite;
   opacity: 1;
 }

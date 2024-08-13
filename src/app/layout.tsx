@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { Manrope } from "next/font/google";
 import localFont from "next/font/local";
 import NavBar from "@/components/navbar/NavBar";
+import MobileNav from "@/components/navbar/MobileNav";
 
 const manrope = Manrope({ subsets: ["latin"] });
 const arial = localFont({
@@ -22,12 +23,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${
-          manrope.className + " " + arial.variable
-        } relative overflow-x-hidden`}
-      >
+      <body className={`${manrope.className + " " + arial.variable}  `}>
         <NavBar />
+        <MobileNav />
         {children}
       </body>
     </html>

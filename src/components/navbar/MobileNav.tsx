@@ -31,7 +31,7 @@ export default function MobileNav() {
           <div className={overlayClasses} onClick={() => setIsOpen(false)} />
           <nav
             className={cn(
-              "absolute top-0 z-50 h-dvh w-[220px] lg:w-96 bg-[#001b27] pt-10 transition-[left,transform] duration-500 ease-in-out",
+              "absolute top-0 z-50 h-dvh w-[220px] sm:w-96 bg-[#001b27] pt-10 transition-[left,transform] duration-500 ease-in-out",
               {
                 "left-0": isOpen,
                 "left-0 -translate-x-96": !isOpen,
