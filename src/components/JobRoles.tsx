@@ -77,7 +77,7 @@ export default function JobRoles() {
       <div className="max-w-6xl mx-auto px-8">
         <MaxScreen>
           <SectionHeader>
-            <Heading>Job Roles</Heading>
+          <Heading>Job Roles</Heading>
             <Paragraph className="max-w-xl">
               Our platform is designed to meet the needs for virtually any job
               role from entry level to senior leadership role.

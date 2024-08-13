@@ -70,10 +70,7 @@ export default function HireSmarterItem() {
           <h3 className="text-2xl font-semibold">{tabs[current].title}</h3>
           <p className="md:text-lg lg:text-xl">{tabs[current].paragraph}</p>
         </div>
-        <Image
-          src={tabs[current].image || tabs[0].image}
-          alt={tabs[current].title + " image"}
-        />
+        <Image src={tabs[current].image} alt={tabs[current].title} />
       </div>
       <div className="text-center pt-20">
         <Link
