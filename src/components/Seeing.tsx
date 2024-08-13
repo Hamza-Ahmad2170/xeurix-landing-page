@@ -11,7 +11,7 @@ export default function Seeing() {
         <MaxScreen>
           <SectionHeader>
             <Heading>Seeing is believing</Heading>
-            <Paragraph className="max-w-2xl">
+            <Paragraph className="max-w-5xl">
               With Xeurix’s life-like With Xeurix’s life-like{" "}
               <span className="font-semibold text-[#d4145a]">
                 3D job simulations
