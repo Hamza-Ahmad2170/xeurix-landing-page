@@ -113,11 +113,11 @@ export default function ImpactCountDown() {
           <li
             key={index}
             onClick={() => handleTabChange(index)}
-            className={`md:text-bas relative basis-1/2 rounded-md py-2 text-center ${
+            className={`text-xs sm:text-base relative basis-1/2 rounded-md py-2 text-center ${
               activeTabIndex === index ? "bg-[#d4145a] text-white" : ""
             }`}
           >
-            <button>
+            <button className="">
               {activeTabIndex === index && (
                 <span className="absolute left-[45%] top-full h-0 w-0 border-x-8 border-t-[16px] border-x-transparent border-t-[#d4145a]"></span>
               )}
@@ -127,14 +127,14 @@ export default function ImpactCountDown() {
         ))}
       </ul>
       <div className="py-4">
-        <p>{impactData[activeTabIndex].content}</p>
+        <p className="text-xl">{impactData[activeTabIndex].content}</p>
       </div>
       <div
-        className="flex flex-wrap justify-center gap-x-4 gap-y-20 py-6 md:flex-row md:justify-between"
+        className="flex flex-wrap justify-center gap-x-4 gap-y-20 py-8 md:flex-row md:justify-evenly"
         ref={ref}
       >
         {impactData[activeTabIndex].numbers.map((num, index) => (
-          <div key={index} className="w-[21rem] text-center">
+          <div key={index} className="w-[16rem] text-center">
             {inView && (
               <CountUp
                 start={
@@ -149,7 +149,7 @@ export default function ImpactCountDown() {
               />
             )}
             <span className="text-4xl font-semibold">%</span>
-            <p className="py-4 text-xl font-semibold">
+            <p className="py-4 text-2xl font-semibold">
               {impactData[activeTabIndex].subHeading[index].title}
             </p>
             <p>{impactData[activeTabIndex].subHeading[index].text}</p>

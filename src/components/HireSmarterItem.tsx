@@ -45,9 +45,9 @@ export default function HireSmarterItem() {
 
   return (
     <>
-      <ul className="grid justify-center gap-12 pt-16 pb-20 sm:grid-cols-2  lg:grid-cols-4">
+      <ul className="grid justify-center gap-y-8 pt-16 pb-20 sm:grid-cols-2 md:grid-cols-4 max-w-5xl mx-auto">
         {tabs.map((tab, index) => (
-          <li key={tab.title} className="text-center">
+          <li key={tab.title} className="text-center ">
             <button
               className={cn(
                 "rounded-md px-6 py-1 text-center text-lg xl:text-xl",
@@ -65,10 +65,10 @@ export default function HireSmarterItem() {
         ))}
       </ul>
 
-      <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
+      <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
         <div className="flex flex-col gap-5">
-          <h3 className="text-xl font-semibold">{tabs[current].title}</h3>
-          <p>{tabs[current].paragraph}</p>
+          <h3 className="text-2xl font-semibold">{tabs[current].title}</h3>
+          <p className="md:text-lg lg:text-xl">{tabs[current].paragraph}</p>
         </div>
         <Image
           src={tabs[current].image || tabs[0].image}

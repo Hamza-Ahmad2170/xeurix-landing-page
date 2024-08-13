@@ -6,7 +6,7 @@ import SectionHeader from "./SectionHeader";
 
 export default function Impact() {
   return (
-    <section>
+    <section className="hidden sm:block">
       <div className="max-w-6xl px-8 mx-auto">
         <MaxScreen>
           <SectionHeader>

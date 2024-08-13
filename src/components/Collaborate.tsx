@@ -7,17 +7,17 @@ import Image from "next/image";
 
 export default function Collaborate() {
   return (
-    <section className="">
-      <div className="max-w-6xl mx-auto px-8">
+    <section>
+      <div className="px-8">
         <MaxScreen>
-          <SectionHeader>
+          <SectionHeader className="max-w-6xl mx-auto ">
             <Heading>Engage, Collaborate, and Hire</Heading>
             <Paragraph className="mx-auto max-w-xl">
               With Xeurix collaborate and create a frictionless hiring funnel by
               eliminating tedious back-and-forth communication
             </Paragraph>
           </SectionHeader>
-          <Image src={dnd} alt="dnd" className="pt-16" />
+          <Image src={dnd} alt="dnd" className="pt-16 max-w-7xl mx-auto" />
         </MaxScreen>
       </div>
     </section>

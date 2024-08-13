@@ -7,6 +7,7 @@ import character from "../../public/images/platform/ai_characters.png";
 import evaluation from "../../public/images/platform/ai_evaluation.png";
 import Image from "next/image";
 import { Fragment } from "react";
+import { cn } from "@/lib/utils";
 
 const PlatformData = [
   {
@@ -42,21 +43,27 @@ export default function Platform() {
               precisely to each role and company.
             </Paragraph>
           </SectionHeader>
-          <div className="grid grid-cols-1 lg:grid-cols-2 pt-20 ">
-            {PlatformData.map((platform) => (
-              <Fragment key={platform.heading}>
-                <div className="space-y-5 pt-24">
-                  <h3 className="text-xl font-bold">{platform.heading}</h3>
-                  <p>{platform.paragraph}</p>
-                </div>
-                <Image
-                  src={platform.image}
-                  alt={platform.heading}
-                  className=""
-                />
-              </Fragment>
-            ))}
-          </div>
+
+          {PlatformData.map((platform, index) => (
+            <div className="flex gap-x-4 flex-wrap" key={platform.heading}>
+              <div
+                className={cn(
+                  "space-y-5 pt-16 xl:pt-20 w-full lg:w-[calc(50%-1rem)]",
+                  {
+                    "lg:order-2": index % 2 > 0,
+                  }
+                )}
+              >
+                <h3 className="text-[1.625rem] font-bold pb-2">
+                  {platform.heading}
+                </h3>
+                <p className="text-2xl">{platform.paragraph}</p>
+              </div>
+              <div className="w-full lg:w-[calc(50%-1rem)]">
+                <Image src={platform.image} alt={platform.heading} />
+              </div>
+            </div>
+          ))}
         </MaxScreen>
       </div>
     </div>
