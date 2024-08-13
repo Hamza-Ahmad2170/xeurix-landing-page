@@ -9,6 +9,7 @@ import Collaborate from "@/components/Collaborate";
 import JobRoles from "@/components/JobRoles";
 import Partners from "@/components/Partners";
 import Footer from "@/components/footer/Footer";
+import FAQ from "@/components/faq/FAQ";
 
 export default function Home() {
   return (
@@ -22,6 +23,7 @@ export default function Home() {
       <Collaborate />
       <JobRoles />
       <Partners />
+      <FAQ />
       <Footer />
     </main>
   );

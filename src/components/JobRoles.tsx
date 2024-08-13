@@ -17,7 +17,7 @@ const jobRoles = [
   {
     image: support_staff,
     alt: "Support Staff",
-    heading: "Support staff",
+    heading: "Support Staff",
     text: "Assess customer service skills and operational efficiency.",
   },
   {
@@ -30,7 +30,7 @@ const jobRoles = [
   {
     image: executives,
     alt: "executives",
-    heading: "executives",
+    heading: "Executives",
     text: "Test leadership, decision-making, and strategic planning skills.",
   },
   {
@@ -48,13 +48,13 @@ const jobRoles = [
   {
     image: sales_reps,
     alt: "Sales reps",
-    heading: "Sales reps",
-    text: "Evaluate persuasive communication and sales strategy execution..",
+    heading: "Sales Reps",
+    text: "Evaluate persuasive communication and sales strategy execution.",
   },
   {
     image: medical_staff,
-    alt: "Medical staff",
-    heading: "Medical staff",
+    alt: "Medical Staff",
+    heading: "Medical Staff",
     text: "Test patient care skills and adherence to medical protocols.",
   },
   {
@@ -66,7 +66,7 @@ const jobRoles = [
   {
     image: manager,
     alt: "Manager",
-    heading: "Project managers",
+    heading: "Project Managers",
     text: "Evaluate project planning, teamwork, and leadership skills.",
   },
 ];
@@ -77,8 +77,8 @@ export default function JobRoles() {
       <div className="max-w-6xl mx-auto px-8">
         <MaxScreen>
           <SectionHeader>
-          <Heading>Job Roles</Heading>
-            <Paragraph className="max-w-xl">
+            <Heading>Job Roles</Heading>
+            <Paragraph className="max-w-2xl">
               Our platform is designed to meet the needs for virtually any job
               role from entry level to senior leadership role.
             </Paragraph>
@@ -87,18 +87,18 @@ export default function JobRoles() {
             {jobRoles.map((job) => (
               <div
                 key={job.text}
-                className="rounded-xl lg:basis-72 text-center"
+                className="rounded-xl lg:basis-[21rem] text-center"
               >
                 <Image src={job.image} alt={job.alt} className="mx-auto w-28" />
                 <h3 className="py-3 text-xl font-bold">{job.heading}</h3>
-                <p>{job.text}</p>
+                <p className="text-xl">{job.text}</p>
               </div>
             ))}
           </div>
-          <div className="text-center pt-20">
-            <p className="font-bold pb-8">And many more</p>
-            <button className=" bg-[#d4145a] rounded-md px-6 py-1 text-white inline-block text-lg">
-              Get started
+          <div className="text-center pt-14">
+            {/* <p className="font-bold pb-8">And many more</p> */}
+            <button className=" bg-[#d4145a] rounded-md px-8 py-2 text-white inline-block text-xl font-bold">
+              Get Started
             </button>
           </div>
         </MaxScreen>

@@ -5,5 +5,7 @@ type Props = {
   children: React.ReactNode;
 };
 export default function Heading({ className, children }: Props) {
-  return <h2 className={cn("text-[3rem] font-bold", className)}>{children}</h2>;
+  return (
+    <h2 className={cn("text-[3.4rem] font-bold", className)}>{children}</h2>
+  );
 }

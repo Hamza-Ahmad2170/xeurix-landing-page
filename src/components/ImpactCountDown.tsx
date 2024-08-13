@@ -7,12 +7,12 @@ const impactData = [
   {
     title: "Manual Evaluation",
     content:
-      "Manual evaluation rely on human intuition and manual processes to evaluate candidates. This traditional method involves reviewing resumes, conducting interviews, and making subjective decisions.",
+      "Manual evaluation rely on human intuition and manual processes to evaluate candidates. This method involves reviewing resumes, conducting interviews, and making subjective decisions.",
     numbers: [0, 0, 0],
     subHeading: [
       {
         title: "Time Saved",
-        text: "Limited time savings due to extensive manual processes.",
+        text: "Limited time savings due to extensive manual processes and no automation .",
       },
       {
         title: "Employee Retention",
@@ -34,15 +34,18 @@ const impactData = [
     subHeading: [
       {
         title: "Time Saved",
-        text: "Moderate time savings through automated keyword filtering.",
+        text: "Moderate time savings through automated resume filtering based on job keywords.",
       },
       {
         title: "Employee Retention",
-        text: "Retention rates are variable; may not accurately reflect candidate suitability beyond keywords.",
+        text: "Retention rates  may not accurately reflect candidate suitability beyond keywords.",
       },
       {
         title: "Employee Productivity",
-        text: "Productivity can be impacted by overlooking soft skills and real-world capabilities",
+        text:
+          "Productivity can be impacted by overlooking soft skills and" +
+          "  " +
+          "real-world capabilities",
       },
     ],
   },
@@ -55,11 +58,11 @@ const impactData = [
     subHeading: [
       {
         title: "Time Saved",
-        text: "Moderate time savings with structured assessment tools.",
+        text: "Moderate time savings with structured assessment tools and reports.",
       },
       {
         title: "Employee Retention",
-        text: "Improved retention rates compared to manual assessments but still limited by test scope.",
+        text: "Improved retention rates compared to manual assessments but still limited.",
       },
       {
         title: "Employee Productivity",
@@ -113,7 +116,7 @@ export default function ImpactCountDown() {
           <li
             key={index}
             onClick={() => handleTabChange(index)}
-            className={`text-xs sm:text-base relative basis-1/2 rounded-md py-2 text-center ${
+            className={`text-xs sm:text-[1.38rem] relative basis-1/2 rounded-md py-4 text-center ${
               activeTabIndex === index ? "bg-[#d4145a] text-white" : ""
             }`}
           >
@@ -126,15 +129,17 @@ export default function ImpactCountDown() {
           </li>
         ))}
       </ul>
-      <div className="py-4">
-        <p className="text-xl">{impactData[activeTabIndex].content}</p>
-      </div>
+
+      <p className="text-2xl py-8 text-center">
+        {impactData[activeTabIndex].content}
+      </p>
+
       <div
-        className="flex flex-wrap justify-center gap-x-4 gap-y-20 py-8 md:flex-row md:justify-evenly"
+        className="flex flex-wrap justify-center gap-x-4 gap-y-20 py-8 md:flex-row md:justify-between"
         ref={ref}
       >
         {impactData[activeTabIndex].numbers.map((num, index) => (
-          <div key={index} className="w-[16rem] text-center">
+          <div key={index} className="w-[20rem] text-center">
             {inView && (
               <CountUp
                 start={
@@ -145,14 +150,16 @@ export default function ImpactCountDown() {
                 end={num}
                 duration={1}
                 separator=","
-                className="text-4xl font-semibold"
+                className="text-[5rem] font-semibold"
               />
             )}
-            <span className="text-4xl font-semibold">%</span>
+            <span className="text-[5rem] font-semibold">%</span>
             <p className="py-4 text-2xl font-semibold">
               {impactData[activeTabIndex].subHeading[index].title}
             </p>
-            <p>{impactData[activeTabIndex].subHeading[index].text}</p>
+            <p className="text-[1.38rem]">
+              {impactData[activeTabIndex].subHeading[index].text}
+            </p>
           </div>
         ))}
       </div>

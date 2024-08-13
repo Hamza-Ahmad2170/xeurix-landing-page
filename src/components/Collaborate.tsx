@@ -12,9 +12,9 @@ export default function Collaborate() {
         <MaxScreen>
           <SectionHeader className="max-w-6xl mx-auto ">
             <Heading>Engage, Collaborate, and Hire</Heading>
-            <Paragraph className="mx-auto max-w-xl">
+            <Paragraph className="mx-auto max-w-3xl">
               With Xeurix collaborate and create a frictionless hiring funnel by
-              eliminating tedious back-and-forth communication
+              eliminating tedious back-and-forth communication.
             </Paragraph>
           </SectionHeader>
           <Image src={dnd} alt="dnd" className="pt-16 max-w-7xl mx-auto" />

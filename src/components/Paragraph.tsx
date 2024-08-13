@@ -6,5 +6,14 @@ type ParagraphProps = {
 };
 
 export default function Paragraph({ className, children }: ParagraphProps) {
-  return <p className={cn("text-center text-[1.25rem] font-semibold mx-auto", className)}>{children}</p>;
+  return (
+    <p
+      className={cn(
+        "text-center text-[1.5rem] font-semibold mx-auto",
+        className
+      )}
+    >
+      {children}
+    </p>
+  );
 }
