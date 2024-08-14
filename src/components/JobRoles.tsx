@@ -74,7 +74,7 @@ const jobRoles = [
 export default function JobRoles() {
   return (
     <section className="bg-[#e4f4fb]">
-      <div className="max-w-6xl mx-auto px-8">
+      <div className="max-w-6xl mx-auto px-4">
         <MaxScreen>
           <SectionHeader>
             <Heading>Job Roles</Heading>
@@ -92,7 +92,7 @@ export default function JobRoles() {
                 <Image
                   src={job.image}
                   alt={job.alt}
-                  className="mx-auto sm:w-52"
+                  className="mx-auto w-52 sm:w-28"
                 />
                 <h3 className="py-3 text-xl font-bold">{job.heading}</h3>
                 <p className="text-xl">{job.text}</p>

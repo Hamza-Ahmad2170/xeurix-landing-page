@@ -7,7 +7,7 @@ import Wave from "./Wave";
 export default function Seeing() {
   return (
     <section className="bg-[#e0f2fb] relative overflow-x-clip">
-      <div className="max-w-6xl mx-auto px-8">
+      <div className="max-w-6xl mx-auto px-4">
         <MaxScreen>
           <SectionHeader>
             <Heading>Seeing is believing</Heading>

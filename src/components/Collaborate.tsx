@@ -8,7 +8,7 @@ import Image from "next/image";
 export default function Collaborate() {
   return (
     <section>
-      <div className="px-8 max-w-6xl mx-auto">
+    <div className="px-4 max-w-6xl mx-auto">
         <MaxScreen>
           <SectionHeader className=" ">
             <Heading>Engage, Collaborate, and Hire</Heading>

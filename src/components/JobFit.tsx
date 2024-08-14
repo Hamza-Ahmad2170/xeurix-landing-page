@@ -12,10 +12,10 @@ export default function JobFit() {
       <div className="container">
         <MaxScreen className="min-h-[calc(100dvh-66px)] flex justify-between items-center flex-col xl:flex-row ">
           <div className="xl:basis-2/4 flex flex-col gap-8 order-2 xl:order-1 py-20 xl:py-0">
-            <Heading className="font-bold max-[1400px]:text-[3.5rem] lg:text-[2.8rem] 2xl:text-[4.3rem]">
+            <Heading className="font-bold text-4xl leading-snug  lg:text-[2.8rem] 2xl:text-[4.3rem]">
               Boost Job Fit, Employee Productivity, and Retention.
             </Heading>
-            <p className="text-2xl">
+            <p className="text-lg sm:text-2xl">
               The world’s first
               <span className="font-bold"> AI-driven job simulations</span> for
               hiring, training, and retaining talent.

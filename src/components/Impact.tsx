@@ -7,7 +7,7 @@ import SectionHeader from "./SectionHeader";
 export default function Impact() {
   return (
     <section className="hidden sm:block">
-      <div className="max-w-6xl px-8 mx-auto">
+      <div className="max-w-6xl px-4 mx-auto">
         <MaxScreen>
           <SectionHeader>
             <Heading>Why Xeurix: The Impact?</Heading>

@@ -6,14 +6,5 @@ type MaxScreenProps = {
 };
 
 export default function MaxScreen({ children, className }: MaxScreenProps) {
-  return (
-    <div
-      className={cn(
-        "min-h-dvh py-20",
-        className,
-      )}
-    >
-      {children}
-    </div>
-  );
+  return <div className={cn("md:min-h-dvh py-20", className)}>{children}</div>;
 }

@@ -33,7 +33,7 @@ const PlatformData = [
 export default function Platform() {
   return (
     <div className="bg-[#001b27] text-white">
-      <div className="max-w-6xl mx-auto px-8">
+      <div className="max-w-6xl mx-auto px-4">
         <MaxScreen>
           <SectionHeader>
             <Heading>AI-Powered Hiring Platform</Heading>
@@ -48,16 +48,16 @@ export default function Platform() {
             <div className="flex gap-x-4 flex-wrap" key={platform.heading}>
               <div
                 className={cn(
-                  "space-y-5 pt-24 xl:pt-20 w-full lg:w-[calc(50%-1rem)]",
+                  "space-y-3 sm:space-y-5 sm:pt-24 pt-16 xl:pt-20 w-full lg:w-[calc(50%-1rem)]",
                   {
                     "lg:order-2": index % 2 > 0,
                   }
                 )}
               >
-                <h3 className="text-[1.625rem] font-bold pb-2">
+                <h3 className="text-xl sm:text-[1.625rem] font-bold pb-2">
                   {platform.heading}
                 </h3>
-                <p className="text-xl sm:text-2xl ">{platform.paragraph}</p>
+                <p className="text-sm sm:text-2xl ">{platform.paragraph}</p>
               </div>
               <div className="w-full lg:w-[calc(50%-1rem)]">
                 <Image src={platform.image} alt={platform.heading} />

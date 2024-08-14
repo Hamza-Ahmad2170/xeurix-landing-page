@@ -40,7 +40,7 @@ const hireSmarterData = [
 export default function HireSmarter() {
   return (
     <section>
-      <div className="max-w-6xl mx-auto px-8">
+      <div className="max-w-6xl mx-auto px-4">
         <MaxScreen>
           <SectionHeader>
             <Heading>Hire Smarter with Xeurix</Heading>
@@ -50,14 +50,22 @@ export default function HireSmarter() {
             </Paragraph>
           </SectionHeader>
           {hireSmarterData.map((data, index) => (
-            <div key={index} className="flex gap-x-4 flex-wrap py-20 gap-y-12">
+            <div
+              key={index}
+              className="flex gap-x-4 flex-wrap py-12 sm:py-20 gap-y-12"
+            >
               <div
-                className={cn("space-y-5 w-full lg:w-[calc(50%-1rem)]", {
-                  "lg:order-2": index % 2 > 0,
-                })}
+                className={cn(
+                  "space-y-3 sm:space-y-5 w-full lg:w-[calc(50%-1rem)]",
+                  {
+                    "lg:order-2": index % 2 > 0,
+                  }
+                )}
               >
-                <h3 className="text-[1.625rem] font-bold pb-2">{data.title}</h3>
-                <p className="text-xl sm:text-2xl">{data.paragraph}</p>
+                <h3 className="text-xl sm:text-[1.625rem] font-bold pb-2">
+                  {data.title}
+                </h3>
+                <p className=" sm:text-2xl">{data.paragraph}</p>
               </div>
               <div className="w-full lg:w-[calc(50%-1rem)]">
                 <Image src={data.image} alt={data.title} />

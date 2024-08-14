@@ -46,7 +46,7 @@ const partners = [
 export default function Partners() {
   return (
     <section className="bg-[#eeebed]">
-      <div className="px-8 mx-auto max-w-6xl">
+      <div className="px-4 mx-auto max-w-6xl">
         <MaxScreen>
           <SectionHeader>
             <Heading>ATS Integration Partners</Heading>
