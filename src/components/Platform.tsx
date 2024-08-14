@@ -48,7 +48,7 @@ export default function Platform() {
             <div className="flex gap-x-4 flex-wrap" key={platform.heading}>
               <div
                 className={cn(
-                  "space-y-5 pt-16 xl:pt-20 w-full lg:w-[calc(50%-1rem)]",
+                  "space-y-5 pt-24 xl:pt-20 w-full lg:w-[calc(50%-1rem)]",
                   {
                     "lg:order-2": index % 2 > 0,
                   }
@@ -57,7 +57,7 @@ export default function Platform() {
                 <h3 className="text-[1.625rem] font-bold pb-2">
                   {platform.heading}
                 </h3>
-                <p className="text-2xl">{platform.paragraph}</p>
+                <p className="text-xl sm:text-2xl ">{platform.paragraph}</p>
               </div>
               <div className="w-full lg:w-[calc(50%-1rem)]">
                 <Image src={platform.image} alt={platform.heading} />

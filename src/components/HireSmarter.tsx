@@ -5,8 +5,8 @@ import Paragraph from "./Paragraph";
 import SectionHeader from "./SectionHeader";
 import boostJobFit from "../../public/images/hire smarter/boost_jobfit.png";
 import eliminate_bias from "../../public/images/hire smarter/eliminate_bias.png";
-import remotehiring from "../../public/images/hire smarter/faster_hiring.png";
-import faster_hiring from "../../public/images/hire smarter/remotehiring.png";
+import remotehiring from "../../public/images/hire smarter/remotehiring.png";
+import faster_hiring from "../../public/images/hire smarter/faster_hiring.png";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
 
@@ -50,14 +50,14 @@ export default function HireSmarter() {
             </Paragraph>
           </SectionHeader>
           {hireSmarterData.map((data, index) => (
-            <div key={index} className="flex gap-x-4 flex-wrap py-20">
+            <div key={index} className="flex gap-x-4 flex-wrap py-20 gap-y-12">
               <div
-                className={cn("space-y-5  w-full lg:w-[calc(50%-1rem)]", {
+                className={cn("space-y-5 w-full lg:w-[calc(50%-1rem)]", {
                   "lg:order-2": index % 2 > 0,
                 })}
               >
                 <h3 className="text-[1.625rem] font-bold pb-2">{data.title}</h3>
-                <p className="text-2xl">{data.paragraph}</p>
+                <p className="text-xl sm:text-2xl">{data.paragraph}</p>
               </div>
               <div className="w-full lg:w-[calc(50%-1rem)]">
                 <Image src={data.image} alt={data.title} />

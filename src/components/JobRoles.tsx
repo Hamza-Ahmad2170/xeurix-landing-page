@@ -83,13 +83,13 @@ export default function JobRoles() {
               role from entry level to senior leadership role.
             </Paragraph>
           </SectionHeader>
-          <div className="flex  flex-wrap justify-between gap-y-10 pt-16">
+          <div className="flex  flex-wrap justify-evenly lg:justify-between gap-y-10 pt-16 ">
             {jobRoles.map((job) => (
               <div
                 key={job.text}
-                className="rounded-xl lg:basis-[21rem] text-center"
+                className="rounded-xl basis-56 sm:basis-[21rem] text-center"
               >
-                <Image src={job.image} alt={job.alt} className="mx-auto w-28" />
+                <Image src={job.image} alt={job.alt} className="mx-auto w-52" />
                 <h3 className="py-3 text-xl font-bold">{job.heading}</h3>
                 <p className="text-xl">{job.text}</p>
               </div>

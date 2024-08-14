@@ -6,6 +6,13 @@ type Props = {
 };
 export default function Heading({ className, children }: Props) {
   return (
-    <h2 className={cn("text-[3.4rem] font-bold", className)}>{children}</h2>
+    <h2
+      className={cn(
+        "text-4xl sm:text-4xl  md:text-[3.4rem] font-bold",
+        className
+      )}
+    >
+      {children}
+    </h2>
   );
 }

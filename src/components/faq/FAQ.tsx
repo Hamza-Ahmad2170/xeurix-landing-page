@@ -48,9 +48,7 @@ export default function FAQ() {
             <div className="absolute bottom-1/2 z-10 w-full text-center text-[10rem] font-bold leading-6 text-[#29abe2] opacity-10">
               FAQ
             </div>
-            <Heading className="text-5xl font-medium leading-[1.2]">
-              Question and Answers
-            </Heading>
+            <Heading>Question and Answers</Heading>
             <Paragraph className="mx-auto max-w-2xl">
               Answers to Common Questions About Xeurix’s AI-Powered Hiring
               Platform and Job Simulations.
