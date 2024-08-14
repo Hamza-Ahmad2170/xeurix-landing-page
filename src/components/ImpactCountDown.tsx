@@ -116,11 +116,11 @@ export default function ImpactCountDown() {
           <li
             key={index}
             onClick={() => handleTabChange(index)}
-            className={`text-xs sm:text-[1.38rem] relative basis-1/2 rounded-md py-4 text-center ${
+            className={` relative basis-1/2 rounded-md py-4 text-center ${
               activeTabIndex === index ? "bg-[#d4145a] text-white" : ""
             }`}
           >
-            <button className="">
+            <button className="text-lg lg:text-[1.5rem]">
               {activeTabIndex === index && (
                 <span className="absolute left-[45%] top-full h-0 w-0 border-x-8 border-t-[16px] border-x-transparent border-t-[#d4145a]"></span>
               )}
@@ -135,7 +135,7 @@ export default function ImpactCountDown() {
       </p>
 
       <div
-        className="flex flex-wrap justify-center gap-x-4 gap-y-20 py-8 md:flex-row md:justify-between"
+        className="flex flex-wrap  justify-center gap-x-4 gap-y-20 py-8 md:flex-row lg:justify-between"
         ref={ref}
       >
         {impactData[activeTabIndex].numbers.map((num, index) => (
