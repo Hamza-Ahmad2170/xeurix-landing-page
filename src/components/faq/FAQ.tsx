@@ -59,7 +59,7 @@ export default function FAQ() {
             className="flex w-full flex-wrap justify-center sm:gap-4 xl:flex-nowrap pt-20"
             allowZeroExpanded
           >
-            <div className="w-full lg:basis-1/2">
+            <div className="w-full xl:basis-1/2">
               {faqItems.slice(0, 3).map((items) => (
                 <AccordionItem
                   key={items.question}
@@ -72,7 +72,7 @@ export default function FAQ() {
                 </AccordionItem>
               ))}
             </div>
-            <div className="w-full lg:basis-1/2">
+            <div className="w-full xl:basis-1/2">
               {faqItems.slice(3, 6).map((items) => (
                 <AccordionItem
                   key={items.question}

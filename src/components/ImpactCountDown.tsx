@@ -135,7 +135,7 @@ export default function ImpactCountDown() {
       </p>
 
       <div
-        className="flex flex-wrap  justify-center gap-x-4 gap-y-20 py-8 md:flex-row lg:justify-between"
+        className="flex flex-wrap items-stretch justify-center gap-x-4 gap-y-20 py-8 md:flex-row lg:justify-between"
         ref={ref}
       >
         {impactData[activeTabIndex].numbers.map((num, index) => (

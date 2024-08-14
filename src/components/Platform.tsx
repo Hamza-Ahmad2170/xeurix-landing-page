@@ -45,10 +45,13 @@ export default function Platform() {
           </SectionHeader>
 
           {PlatformData.map((platform, index) => (
-            <div className="flex gap-x-4 flex-wrap" key={platform.heading}>
+            <div
+              className="flex gap-x-4 flex-wrap py-20"
+              key={platform.heading}
+            >
               <div
                 className={cn(
-                  "space-y-3 sm:space-y-5 sm:pt-24 pt-16 xl:pt-20 w-full lg:w-[calc(50%-1rem)]",
+                  "space-y-3 sm:space-y-5 w-full lg:w-[calc(50%-1rem)]",
                   {
                     "lg:order-2": index % 2 > 0,
                   }
@@ -59,7 +62,7 @@ export default function Platform() {
                 </h3>
                 <p className="text-sm sm:text-2xl ">{platform.paragraph}</p>
               </div>
-              <div className="w-full lg:w-[calc(50%-1rem)]">
+              <div className="w-full lg:w-[calc(50%-1rem)] pt-10 lg:pt-0">
                 <Image src={platform.image} alt={platform.heading} />
               </div>
             </div>
