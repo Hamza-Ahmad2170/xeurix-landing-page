@@ -9,7 +9,7 @@ export default function Paragraph({ className, children }: ParagraphProps) {
   return (
     <p
       className={cn(
-        "text-center text-lg sm:text-xl md:text-[1.5rem] font-semibold mx-auto",
+        "text-center sm:text-xl md:text-[1.5rem] font-semibold mx-auto",
         className
       )}
     >

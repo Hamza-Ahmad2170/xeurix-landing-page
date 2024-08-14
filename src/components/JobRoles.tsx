@@ -89,7 +89,11 @@ export default function JobRoles() {
                 key={job.text}
                 className="rounded-xl basis-56 sm:basis-[21rem] text-center"
               >
-                <Image src={job.image} alt={job.alt} className="mx-auto w-52" />
+                <Image
+                  src={job.image}
+                  alt={job.alt}
+                  className="mx-auto sm:w-52"
+                />
                 <h3 className="py-3 text-xl font-bold">{job.heading}</h3>
                 <p className="text-xl">{job.text}</p>
               </div>
