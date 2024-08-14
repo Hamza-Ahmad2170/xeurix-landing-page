@@ -5,8 +5,8 @@ import Paragraph from "./Paragraph";
 import SectionHeader from "./SectionHeader";
 import boostJobFit from "../../public/images/hire smarter/boost_jobfit.png";
 import eliminate_bias from "../../public/images/hire smarter/eliminate_bias.png";
-import faster_hiring from "../../public/images/hire smarter/Faster_Hiring.png";
-import remotehiring from "../../public/images/hire smarter/remotehiring.png";
+import remotehiring from "../../public/images/hire smarter/faster_hiring.png";
+import faster_hiring from "../../public/images/hire smarter/remotehiring.png";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
 
