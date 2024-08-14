@@ -56,7 +56,7 @@ export default function FAQ() {
           </div>
 
           <Accordion
-            className="flex w-full flex-wrap justify-center gap-4 xl:flex-nowrap pt-20"
+            className="flex w-full flex-wrap justify-center sm:gap-4 xl:flex-nowrap pt-20"
             allowZeroExpanded
           >
             <div className="w-full lg:basis-1/2">
