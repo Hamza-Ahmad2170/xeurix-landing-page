@@ -20,7 +20,7 @@ export default function Seeing() {
               interview them. Evaluate job fit based on evidence, not intuition.
             </Paragraph>
           </SectionHeader>
-          <video loop muted autoPlay className="h-auto w-full pt-8">
+          <video muted autoPlay preload="none" className="h-auto w-full pt-8">
             <source src="/video/xeurix_sim.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>

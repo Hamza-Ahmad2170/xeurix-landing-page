@@ -3,8 +3,8 @@ export default function Logo() {
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 870.13 261.96"
-      width="83"
-      height="25"
+      width="100"
+      height="auto"
     >
       <defs>
         <clipPath id="a">

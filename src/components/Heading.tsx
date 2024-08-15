@@ -8,7 +8,7 @@ export default function Heading({ className, children }: Props) {
   return (
     <h2
       className={cn(
-        "text-[1.38rem] md:text-4xl  lg:text-[3.4rem] font-bold",
+        "text-[1.38rem] md:text-4xl lg:text-[3.4rem] font-bold",
         className
       )}
     >

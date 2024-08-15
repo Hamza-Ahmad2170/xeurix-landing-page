@@ -14,7 +14,7 @@ export default function NavLinks() {
           <li key={link}>
             <Link
               href={`/#${link}`}
-              className="block p-5 transition-all duration-300 hover:text-[#d4145a]"
+              className="relative duration-300 before:absolute before:bottom-0 before:left-0 before:h-[2px] before:w-full before:origin-left before:scale-x-0 before:bg-[#d4145a] before:transition-transform before:duration-300 hover:text-[#d4145a] hover:before:scale-x-100 lg:hover:text-white"
             >
               {link}
             </Link>

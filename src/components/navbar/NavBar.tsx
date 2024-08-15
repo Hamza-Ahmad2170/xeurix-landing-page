@@ -11,7 +11,7 @@ export default function NavBar() {
           <Logo />
         </Link>
         <nav>
-          <ul className="flex">
+          <ul className="flex items-center gap-10">
             <NavLinks />
           </ul>
         </nav>
@@ -21,7 +21,7 @@ export default function NavBar() {
           </Link>
           <Link
             href="/demo"
-            className="flex items-center justify-between gap-2 rounded-full bg-[#d4145a] px-5 py-2"
+            className="relative z-20 flex items-center justify-between gap-4 overflow-hidden rounded-full bg-[#d4145a] px-5 py-3 text-lg text-white transition-all duration-700 before:absolute before:left-1/2 before:top-full before:-z-10 before:h-52 before:w-56 before:-translate-x-1/2 before:translate-y-0 before:rounded-full before:bg-[#28A8DF] before:transition-all before:duration-700 hover:before:translate-y-[-50%]"
           >
             <DemoSvg />
             Request Demo
