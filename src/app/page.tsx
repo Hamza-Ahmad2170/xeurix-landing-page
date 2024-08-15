@@ -10,14 +10,14 @@ import JobRoles from "@/components/JobRoles";
 import Partners from "@/components/Partners";
 import Footer from "@/components/footer/Footer";
 import FAQ from "@/components/faq/FAQ";
-import UnName from "@/components/unName";
+import UNName from "@/components/UNName";
 
 export default function Home() {
   return (
     <main className="font-arial">
       <JobFit />
       <Seeing />
-      <UnName />
+      <UNName />
       <HireSmarter />
       <Platform />
       <Impact />
