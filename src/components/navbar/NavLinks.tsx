@@ -11,12 +11,12 @@ export default function NavLinks() {
     <>
       {pathName === "/" &&
         homeNavLinks.map((link) => (
-          <li key={link}>
+          <li key={link.name}>
             <Link
-              href={`/#${link}`}
-              className="relative duration-300 before:absolute before:bottom-0 before:left-0 before:h-[2px] before:w-full before:origin-left before:scale-x-0 before:bg-[#d4145a] before:transition-transform before:duration-300 hover:text-[#d4145a] hover:before:scale-x-100 lg:hover:text-white"
+              href={`${link.path}`}
+              className="relative block py-3 pl-4 font-bold duration-300 before:absolute before:bottom-0 before:left-0 before:h-[2px] before:w-full before:origin-left before:scale-x-0 before:bg-[#d4145a] before:transition-transform before:duration-300 hover:text-[#d4145a] hover:before:scale-x-100 lg:p-0 lg:hover:text-white"
             >
-              {link}
+              {link.name}
             </Link>
           </li>
         ))}
@@ -25,7 +25,7 @@ export default function NavLinks() {
         otherNavLinks.map((link) => (
           <li key={link.name}>
             <Link
-              href={`/${link.path}`}
+              href={`${link.path}`}
               className="block p-5 transition-all duration-300 hover:text-[#d4145a]"
             >
               {link.name}

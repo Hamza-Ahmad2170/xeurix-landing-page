@@ -5,13 +5,13 @@ import DemoSvg from "../svg/Demo";
 
 export default function NavBar() {
   return (
-    <header className="sticky top-0 z-50 hidden bg-[#001b27] text-white xl:block">
+    <header className="sticky top-0 z-50 hidden bg-[#001b27] py-2 text-white xl:block">
       <div className="container flex items-center justify-between">
         <Link href="/" aria-label="Home">
           <Logo />
         </Link>
         <nav>
-          <ul className="flex items-center gap-10">
+          <ul className="items-center gap-10 lg:flex">
             <NavLinks />
           </ul>
         </nav>

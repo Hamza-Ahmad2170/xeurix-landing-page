@@ -4,13 +4,11 @@ import Paragraph from "./Paragraph";
 import SectionHeader from "./SectionHeader";
 import boostJobFit from "../../public/images/hire smarter/boost_jobfit.png";
 import eliminate_bias from "../../public/images/hire smarter/eliminate_bias.png";
-import glob from "../../public/images/hire smarter/globe.png";
 import faster_hiring from "../../public/images/hire smarter/faster_hiring.png";
-import globBottom from "../../public/images/hire smarter/globe_bottom.png";
+
 import Image from "next/image";
 import { cn } from "@/lib/utils";
-import Slide from "./Slide";
-import FadeUp from "./Slide";
+import Slide from "./Fade";
 
 const hireSmarterData = [
   {
@@ -38,21 +36,6 @@ export default function HireSmarter() {
     <section>
       <div className="mx-auto max-w-6xl px-4">
         <MaxScreen>
-          <SectionHeader>
-            <FadeUp>
-              <Image src={glob} alt="Hire Smarter" priority />
-            </FadeUp>
-            <FadeUp>
-              <Heading>Hire Smarter with Xeurix</Heading>
-              <Paragraph className="max-w-3xl">
-                Unlock the full potential of your hiring process with Xeurix’s
-                advanced job simulations and data-driven hiring platform.
-              </Paragraph>
-            </FadeUp>
-            <FadeUp>
-              <Image src={globBottom} alt="Hire Smarter" priority />
-            </FadeUp>
-          </SectionHeader>
           <SectionHeader className="pt-20">
             <Heading>Hire Smarter with Xeurix</Heading>
             <Paragraph className="max-w-3xl">
@@ -63,11 +46,11 @@ export default function HireSmarter() {
           {hireSmarterData.map((data, index) => (
             <div
               key={index}
-              className="flex flex-wrap gap-x-4 gap-y-12 py-12 sm:py-20"
+              className="flex flex-wrap gap-x-8 gap-y-12 py-12 sm:py-20"
             >
               <div
                 className={cn(
-                  "w-full space-y-3 sm:space-y-5 lg:w-[calc(50%-1rem)]",
+                  "w-full space-y-3 sm:space-y-5 lg:w-[calc(50%-2rem)]",
                   {
                     "lg:order-2": index % 2 > 0,
                   },
@@ -80,7 +63,7 @@ export default function HireSmarter() {
                   <p className="sm:text-2xl">{data.paragraph}</p>
                 </Slide>
               </div>
-              <div className="w-full lg:w-[calc(50%-1rem)]">
+              <div className="w-full lg:w-[calc(50%-2rem)]">
                 <Image src={data.image} alt={data.title} />
               </div>
             </div>

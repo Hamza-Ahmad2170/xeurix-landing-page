@@ -4,7 +4,7 @@ export default function Logo() {
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 870.13 261.96"
       width="100"
-      height="auto"
+      height="40"
     >
       <defs>
         <clipPath id="a">

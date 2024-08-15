@@ -13,11 +13,11 @@ export default function MobileNav() {
   const [isOpen, setIsOpen] = useState(false);
 
   const overlayClasses = cn(
-    "absolute top-0 left-0 w-full h-full bg-black opacity-50 z-20 xl:hidden",
+    "fixed top-0 left-0 w-full h-full bg-black opacity-50 z-20 xl:hidden",
     {
       block: isOpen,
       hidden: !isOpen,
-    }
+    },
   );
 
   return (
@@ -31,11 +31,11 @@ export default function MobileNav() {
           <div className={overlayClasses} onClick={() => setIsOpen(false)} />
           <nav
             className={cn(
-              "absolute top-0 z-50 h-dvh w-[220px] sm:w-96 bg-[#001b27] pt-10 transition-[left,transform] duration-500 ease-in-out",
+              "fixed top-0 z-50 h-dvh w-[220px] bg-[#001b27] pt-10 transition-[left,transform] duration-500 ease-in-out sm:w-96",
               {
                 "left-0": isOpen,
                 "left-0 -translate-x-96": !isOpen,
-              }
+              },
             )}
           >
             <div className="flex items-center justify-between p-5">

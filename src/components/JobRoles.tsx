@@ -73,8 +73,8 @@ const jobRoles = [
 
 export default function JobRoles() {
   return (
-    <section className="bg-[#e4f4fb]">
-      <div className="max-w-6xl mx-auto px-4">
+    <section className="bg-[#e4f4fb]" id="jobRoles">
+      <div className="mx-auto max-w-6xl px-4">
         <MaxScreen>
           <SectionHeader>
             <Heading>Job Roles</Heading>
@@ -83,11 +83,11 @@ export default function JobRoles() {
               role from entry level to senior leadership role.
             </Paragraph>
           </SectionHeader>
-          <div className="flex  flex-wrap justify-evenly lg:justify-between gap-y-10 pt-16 ">
+          <div className="flex flex-wrap justify-evenly gap-y-10 pt-16 lg:justify-between">
             {jobRoles.map((job) => (
               <div
                 key={job.text}
-                className="rounded-xl basis-56 sm:basis-[21rem] text-center"
+                className="basis-56 rounded-xl text-center sm:basis-[21rem]"
               >
                 <Image
                   src={job.image}
@@ -99,9 +99,9 @@ export default function JobRoles() {
               </div>
             ))}
           </div>
-          <div className="text-center pt-14">
+          <div className="pt-14 text-center">
             {/* <p className="font-bold pb-8">And many more</p> */}
-            <button className=" bg-[#d4145a] rounded-md px-8 py-2 text-white inline-block text-xl font-bold">
+            <button className="inline-block rounded-md bg-[#d4145a] px-8 py-2 text-xl font-bold text-white">
               Get Started
             </button>
           </div>

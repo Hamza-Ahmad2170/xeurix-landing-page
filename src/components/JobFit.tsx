@@ -4,7 +4,6 @@ import WorkEmail from "./WorkEmail";
 import Image from "next/image";
 import laptopHalf from "../../public/images/laptop_isometric.png";
 import laptopFull from "../../public/images/laptop_banner.png";
-import Link from "next/link";
 
 export default function JobFit() {
   return (
@@ -12,11 +11,11 @@ export default function JobFit() {
       <div className="container">
         <MaxScreen className="flex min-h-[calc(100dvh-66px)] flex-col items-center lg:justify-between xl:flex-row">
           <div className="order-2 space-y-7 py-20 xl:order-1 xl:basis-3/5 xl:py-0">
-            <h1 className="text-7xl leading-relaxed">
-              The world’s first{" "}
+            <h1 className="text-3xl leading-relaxed sm:text-4xl sm:leading-relaxed lg:text-6xl lg:leading-relaxed 2xl:text-7xl 2xl:leading-relaxed">
+              The world’s first
               <span className="font-bolder">
-                <br /> AI-Driven Job Simulations{" "}
-              </span>{" "}
+                <br /> AI-Driven Job Simulations
+              </span>
               <br /> For Hiring.
             </h1>
             <p className="text-lg sm:text-2xl">
