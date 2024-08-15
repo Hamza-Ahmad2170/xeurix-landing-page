@@ -6,7 +6,7 @@ import SectionHeader from "./SectionHeader";
 import glob from "../../public/images/hire smarter/globe.png";
 import globBottom from "../../public/images/hire smarter/globe_bottom.png";
 
-export default function UNName() {
+export default function Glob() {
   return (
     <section className="mx-auto max-w-6xl px-4 py-20">
       <FadeUp>
