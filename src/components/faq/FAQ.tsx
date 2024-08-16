@@ -5,39 +5,7 @@ import Paragraph from "../Paragraph";
 import Heading from "../Heading";
 import FAQAccordion from "./FAQAccordion";
 import MaxScreen from "../MaxScreen";
-
-const faqItems = [
-  {
-    question: "What is Xeurix?",
-    answer:
-      "Xeurix is an advanced hiring platform that uses AI-powered 3D job simulations to evaluate candidates based on real-world scenarios, ensuring the best job and cultural fit.",
-  },
-  {
-    question: "How does Xeurix improve the hiring process?",
-    answer:
-      "Xeurix enhances hiring by providing objective, data-driven insights into candidates' skills and fit. Our simulations replicate real job tasks, allowing you to assess true performance rather than relying on resumes or interviews alone.",
-  },
-  {
-    question: " Can Xeurix be customized for any job role?",
-    answer:
-      "Yes, Xeurix offers hyper-customized simulations tailored to your specific job roles and organizational culture. Our AI matches your job requirements with relevant scenarios to create an accurate assessment.",
-  },
-  {
-    question: "How does Xeurix ensure fairness in hiring?",
-    answer:
-      "Xeurix eliminates bias by focusing on measurable performance metrics instead of subjective judgment. Each candidate is evaluated equally based on how they perform in realistic job scenarios.",
-  },
-  {
-    question: "How long does it take to implement Xeurix?",
-    answer:
-      "Xeurix is quick to set up and can be integrated into your hiring process in just a few days. We offer support throughout the implementation to ensure a smooth transition.",
-  },
-  {
-    question: "What kind of support do you offer after implementation?",
-    answer:
-      "We provide ongoing support, including updates, training, and customization services to ensure Xeurix continues to meet your evolving hiring needs.",
-  },
-];
+import { faqItems } from "@/lib/data";
 
 export default function FAQ() {
   return (
@@ -56,7 +24,7 @@ export default function FAQ() {
           </div>
 
           <Accordion
-            className="flex w-full flex-wrap justify-center sm:gap-4 xl:flex-nowrap pt-20"
+            className="flex w-full flex-wrap justify-center pt-20 sm:gap-4 xl:flex-nowrap"
             allowZeroExpanded
           >
             <div className="w-full xl:basis-1/2">

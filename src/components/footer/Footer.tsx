@@ -5,48 +5,7 @@ import { FaTwitter } from "react-icons/fa";
 import { FaFacebookF } from "react-icons/fa";
 import FooterInput from "./FooterInput";
 import PartyPopper from "../PartyPopper";
-
-const platformItems = [
-  {
-    name: "Login",
-    path: "/login",
-  },
-  {
-    name: "SignUp",
-    path: "/signup",
-  },
-  {
-    name: "Features",
-    path: "/features",
-  },
-  {
-    name: "Benefits",
-    path: "/benefits",
-  },
-  {
-    name: "Use Cases",
-    path: "/use-cases",
-  },
-  {
-    name: "FAQ",
-    path: "/faq",
-  },
-];
-
-const legalItems = [
-  {
-    name: "Terms of use",
-    path: "/termsofuse",
-  },
-  {
-    name: "Privacy policy",
-    path: "/privacypolicy",
-  },
-  {
-    name: "Cookies policy",
-    path: "/cookiespolicy",
-  },
-];
+import { legalItems, platformItems } from "@/lib/data";
 
 export default function Footer() {
   return (

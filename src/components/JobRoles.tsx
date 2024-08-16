@@ -1,75 +1,9 @@
-import support_staff from "../../public/svg/jobRoles/supportstaff.svg";
-import analyst from "../../public/svg/jobRoles/analyst.svg";
-import executives from "../../public/svg/jobRoles/executives.svg";
-import admin_staff from "../../public/svg/jobRoles/adminstaff.svg";
-import accountant from "../../public/svg/jobRoles/accountant.svg";
-import sales_reps from "../../public/svg/jobRoles/sales_reps.svg";
-import medical_staff from "../../public/svg/jobRoles/medicalstaff.svg";
-import programmer from "../../public/svg/jobRoles/programmer.svg";
-import manager from "../../public/svg/jobRoles/projectmanager.svg";
 import MaxScreen from "./MaxScreen";
 import SectionHeader from "./SectionHeader";
 import Heading from "./Heading";
 import Paragraph from "./Paragraph";
 import Image from "next/image";
-
-const jobRoles = [
-  {
-    image: support_staff,
-    alt: "Support Staff",
-    heading: "Support Staff",
-    text: "Assess customer service skills and operational efficiency.",
-  },
-  {
-    image: analyst,
-    alt: "Analyst",
-    heading: "Analysts",
-    text: "Evaluate analytical thinking and data interpretation skills.",
-  },
-
-  {
-    image: executives,
-    alt: "executives",
-    heading: "Executives",
-    text: "Test leadership, decision-making, and strategic planning skills.",
-  },
-  {
-    image: admin_staff,
-    alt: "Admin staff",
-    heading: "Admin staff",
-    text: "Measure organizational abilities and multitasking efficiency.",
-  },
-  {
-    image: accountant,
-    alt: "Accountant",
-    heading: "Accountants",
-    text: "Assess financial acumen and accuracy in financial reporting.",
-  },
-  {
-    image: sales_reps,
-    alt: "Sales reps",
-    heading: "Sales Reps",
-    text: "Evaluate persuasive communication and sales strategy execution.",
-  },
-  {
-    image: medical_staff,
-    alt: "Medical Staff",
-    heading: "Medical Staff",
-    text: "Test patient care skills and adherence to medical protocols.",
-  },
-  {
-    image: programmer,
-    alt: "Programmer",
-    heading: "Programmers",
-    text: "Assess coding proficiency and problem-solving abilities.",
-  },
-  {
-    image: manager,
-    alt: "Manager",
-    heading: "Project Managers",
-    text: "Evaluate project planning, teamwork, and leadership skills.",
-  },
-];
+import { jobRoles } from "@/lib/data";
 
 export default function JobRoles() {
   return (

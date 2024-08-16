@@ -10,7 +10,10 @@ export default function Glob() {
   return (
     <section className="mx-auto max-w-6xl px-4 py-20">
       <FadeUp>
-        <Image src={glob} alt="Hire Smarter" />
+        <Image
+          src={glob}
+          alt="Global remote hiring with objective job fit scores and ranking for faster hiring."
+        />
       </FadeUp>
       <FadeUp>
         <SectionHeader className="py-10">
@@ -22,7 +25,10 @@ export default function Glob() {
         </SectionHeader>
       </FadeUp>
       <FadeUp>
-        <Image src={globBottom} alt="Hire Smarter" />
+        <Image
+          src={globBottom}
+          alt="Candidate successfully hired with evaluations on teamwork, cultural fit, soft skills, listening, adaptivity, and negotiation."
+        />
       </FadeUp>
     </section>
   );
