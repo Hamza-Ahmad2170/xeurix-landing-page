@@ -12,7 +12,10 @@ import Button from "./Button";
 
 export default function HireSmarter() {
   return (
-    <section id="benefits">
+    <section
+      id="benefits "
+      className="bg-[url('/images/pattern/pattern21.png')] bg-right bg-no-repeat"
+    >
       <div className="mx-auto max-w-6xl px-4">
         <MaxScreen>
           <FadeUp>

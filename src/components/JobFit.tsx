@@ -13,7 +13,7 @@ export default function JobFit() {
         <MaxScreen className="flex min-h-[calc(100dvh-66px)] flex-col items-center py-10 lg:justify-between xl:flex-row">
           <div className="order-2 space-y-7 py-6 xl:order-1 xl:basis-3/5 xl:py-0">
             <h1 className="text-[1.5rem] leading-relaxed sm:text-4xl sm:leading-relaxed lg:text-6xl lg:leading-relaxed 2xl:text-7xl 2xl:leading-relaxed">
-              The world’s first
+              The World’s First
               <span className="font-extrabold">
                 <br /> AI-Driven Job Simulations
               </span>

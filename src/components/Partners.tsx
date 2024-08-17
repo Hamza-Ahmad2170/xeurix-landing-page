@@ -9,35 +9,37 @@ import FadeUp from "./FadeUp";
 export default function Partners() {
   return (
     <section className="bg-[#eeebed]">
-      <div className="mx-auto max-w-6xl px-4">
-        <MaxScreen>
-          <FadeUp>
-            <SectionHeader>
-              <Heading>ATS Integration Partners</Heading>
-              <Paragraph className="max-w-xl">
-                Integrate with over 45 major applicant tracking systems to
-                create seamless workflows
-              </Paragraph>
-            </SectionHeader>
-          </FadeUp>
-          <div className="grid grid-cols-2 justify-center gap-4 py-10 md:grid-cols-4">
-            {partners.map((partner) => (
-              <FadeUp
-                key={partner.alt}
-                className="partners mx-auto flex items-center justify-center bg-white px-4 shadow-xl lg:size-[268px]"
-              >
-                <Image
-                  src={partner.image}
-                  alt={partner.alt}
+      <div className="bg-[url('/images/pattern/watersplash.png')] bg-right bg-no-repeat">
+        <div className="mx-auto max-w-6xl px-4">
+          <MaxScreen>
+            <FadeUp>
+              <SectionHeader>
+                <Heading>ATS Integration Partners</Heading>
+                <Paragraph className="max-w-xl">
+                  Integrate with over 45 major applicant tracking systems to
+                  create seamless workflows
+                </Paragraph>
+              </SectionHeader>
+            </FadeUp>
+            <div className="grid grid-cols-2 justify-center gap-4 py-10 md:grid-cols-4">
+              {partners.map((partner) => (
+                <FadeUp
                   key={partner.alt}
-                />
-              </FadeUp>
-            ))}
-          </div>
-          <div className="text-center">
-            <p className="text-xl font-bold">And more</p>
-          </div>
-        </MaxScreen>
+                  className="partners mx-auto flex items-center justify-center bg-white px-4 shadow-xl lg:size-[268px]"
+                >
+                  <Image
+                    src={partner.image}
+                    alt={partner.alt}
+                    key={partner.alt}
+                  />
+                </FadeUp>
+              ))}
+            </div>
+            <div className="text-center">
+              <p className="text-xl font-bold">And more</p>
+            </div>
+          </MaxScreen>
+        </div>
       </div>
     </section>
   );

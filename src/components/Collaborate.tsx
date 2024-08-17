@@ -9,7 +9,7 @@ import FadeUp from "./FadeUp";
 
 export default function Collaborate() {
   return (
-    <section>
+    <section className="bg-[url('/images/pattern/Features.png')] bg-right bg-no-repeat">
       <MaxScreen className="px-4">
         <FadeUp>
           <SectionHeader className="mx-auto max-w-6xl">

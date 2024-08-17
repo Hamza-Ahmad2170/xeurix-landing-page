@@ -7,7 +7,10 @@ import SectionHeader from "./SectionHeader";
 
 export default function Impact() {
   return (
-    <section className="" id="impact">
+    <section
+      className="bg-[url('/images/pattern/parallax-4.jpg')] bg-no-repeat"
+      id="impact"
+    >
       <div className="mx-auto max-w-6xl px-4">
         <MaxScreen>
           <SectionHeader>
