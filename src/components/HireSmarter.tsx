@@ -5,21 +5,25 @@ import SectionHeader from "./SectionHeader";
 
 import Image from "next/image";
 import { cn } from "@/lib/utils";
-import Slide from "./Fade";
+
 import { hireSmarterData } from "@/lib/data";
+import FadeUp from "./FadeUp";
+import Button from "./Button";
 
 export default function HireSmarter() {
   return (
-    <section>
+    <section id="benefits">
       <div className="mx-auto max-w-6xl px-4">
         <MaxScreen>
-          <SectionHeader className="pt-20">
-            <Heading>Hire Smarter with Xeurix</Heading>
-            <Paragraph className="max-w-3xl">
-              Unlock the full potential of your hiring process with Xeurix’s
-              advanced job simulations and data-driven hiring platform.
-            </Paragraph>
-          </SectionHeader>
+          <FadeUp>
+            <SectionHeader className="pt-20">
+              <Heading>Elevate Your Hiring Game</Heading>
+              <Paragraph className="max-w-3xl">
+                Leverage AI-Powered Job Simulations for Smarter, Faster, and
+                Bias-Free Hiring Decisions.
+              </Paragraph>
+            </SectionHeader>
+          </FadeUp>
           {hireSmarterData.map((data, index) => (
             <div
               key={index}
@@ -33,18 +37,21 @@ export default function HireSmarter() {
                   },
                 )}
               >
-                <Slide>
+                <FadeUp>
                   <h3 className="pb-2 text-xl font-bold sm:text-[1.625rem]">
                     {data.title}
                   </h3>
                   <p className="sm:text-2xl">{data.paragraph}</p>
-                </Slide>
+                </FadeUp>
               </div>
-              <div className="w-full lg:w-[calc(50%-2rem)]">
+              <FadeUp className="w-full lg:w-[calc(50%-2rem)]">
                 <Image src={data.image} alt={data.title} />
-              </div>
+              </FadeUp>
             </div>
           ))}
+          <div className="text-center">
+            <Button>Request Demo</Button>
+          </div>
         </MaxScreen>
       </div>
     </section>

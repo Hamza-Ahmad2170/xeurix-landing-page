@@ -1,3 +1,4 @@
+import FadeUp from "./FadeUp";
 import Heading from "./Heading";
 import MaxScreen from "./MaxScreen";
 import Paragraph from "./Paragraph";
@@ -6,24 +7,35 @@ import Wave from "./Wave";
 
 export default function Seeing() {
   return (
-    <section className="bg-[#e0f2fb] relative overflow-x-clip">
-      <div className="max-w-6xl mx-auto px-4">
+    <section className="relative overflow-x-clip bg-[#e0f2fb]" id="assessment">
+      <div className="mx-auto max-w-6xl px-4">
         <MaxScreen>
-          <SectionHeader>
-            <Heading>Seeing is believing</Heading>
-            <Paragraph className="max-w-5xl">
-              With Xeurix’s life-like With Xeurix’s life-like{" "}
-              <span className="font-semibold text-[#d4145a]">
-                3D job simulations
-              </span>{" "}
-              , step candidates in your unique job roles before you even
-              interview them. Evaluate job fit based on evidence, not intuition.
-            </Paragraph>
-          </SectionHeader>
-          <video muted autoPlay preload="none" className="h-auto w-full pt-8">
-            <source src="/video/xeurix_sim.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
+          <FadeUp>
+            <SectionHeader>
+              <Heading>Seeing is believing</Heading>
+              <Paragraph className="max-w-5xl">
+                With Xeurix’s life-like With Xeurix’s life-like{" "}
+                <span className="font-semibold text-[#d4145a]">
+                  3D job simulations
+                </span>{" "}
+                , step candidates in your unique job roles before you even
+                interview them. Evaluate job fit based on evidence, not
+                intuition.
+              </Paragraph>
+            </SectionHeader>
+          </FadeUp>
+          <FadeUp>
+            <video
+              muted
+              autoPlay
+              loop
+              preload="none"
+              className="h-auto w-full pt-8"
+            >
+              <source src="/video/xeurix_sim.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </FadeUp>
         </MaxScreen>
       </div>
       <Wave />

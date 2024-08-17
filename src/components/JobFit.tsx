@@ -1,13 +1,14 @@
 import React from "react";
 import MaxScreen from "./MaxScreen";
-import WorkEmail from "./WorkEmail";
+
 import Image from "next/image";
 import laptopHalf from "../../public/images/laptop_isometric.png";
 import laptopFull from "../../public/images/laptop_banner.png";
+import Button from "./Button";
 
 export default function JobFit() {
   return (
-    <section className="gradient-job-fit relative">
+    <section className="gradient-job-fit relative" id="home">
       <div className="container">
         <MaxScreen className="flex min-h-[calc(100dvh-66px)] flex-col items-center lg:justify-between xl:flex-row">
           <div className="order-2 space-y-7 py-20 xl:order-1 xl:basis-3/5 xl:py-0">
@@ -18,12 +19,13 @@ export default function JobFit() {
               </span>
               <br /> For Hiring.
             </h1>
-            <p className="text-lg sm:text-2xl">
-              Boost Job Fit, Employee Productivity, job simulations for hiring,
-              training, and retaining talent.
+            <p className="max-w-3xl text-lg sm:text-2xl">
+              Precisely assess job-fit, cultural-fit, skills with advanced job
+              simulations and data-powered insights.
             </p>
-
-            <WorkEmail />
+            <Button className="inline-block w-40" variant="pill">
+              Free Trial
+            </Button>
           </div>
           <div className="order-1 hidden xl:order-2 xl:block xl:basis-2/5">
             <Image

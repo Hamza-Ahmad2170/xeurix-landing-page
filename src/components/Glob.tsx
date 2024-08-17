@@ -1,10 +1,10 @@
 import Image from "next/image";
-import FadeUp from "./Fade";
+import FadeUp from "./FadeUp";
 import Heading from "./Heading";
 import Paragraph from "./Paragraph";
 import SectionHeader from "./SectionHeader";
-import glob from "../../public/images/hire smarter/globe.png";
-import globBottom from "../../public/images/hire smarter/globe_bottom.png";
+import glob from "../../public/images/globe.png";
+import globBottom from "../../public/images/globe_bottom.png";
 
 export default function Glob() {
   return (

@@ -1,9 +1,15 @@
-import Tailored_Simulations from "../../public/images/platform/Tailored_Simulations.png";
-import ai_characters from "../../public/images/platform//ai_characters.png";
-import ai_evaluation from "../../public/images/platform//ai_evaluation.png";
-import boostJobFit from "../../public/images/hire smarter/boost_jobfit.png";
-import eliminate_bias from "../../public/images/hire smarter/eliminate_bias.png";
-import faster_hiring from "../../public/images/hire smarter/faster_hiring.png";
+// hire smarter
+import ai_evaluation from "../../public/images/ai_evaluation.png";
+import faster_hiring from "../../public/images/faster_hiring.png";
+import eliminate_bias from "../../public/images/eliminate_bias.png";
+
+// platform
+import Tailored_Simulations from "../../public/images/Tailored_Simulations.png";
+import ai_characters from "../../public/images/ai_characters.png";
+import boostJobFit from "../../public/images/boost_jobfit.png";
+
+// job roles
+import manager from "../../public/svg/jobRoles/projectmanager.svg";
 import support_staff from "../../public/svg/jobRoles/supportstaff.svg";
 import analyst from "../../public/svg/jobRoles/analyst.svg";
 import executives from "../../public/svg/jobRoles/executives.svg";
@@ -12,36 +18,41 @@ import accountant from "../../public/svg/jobRoles/accountant.svg";
 import sales_reps from "../../public/svg/jobRoles/sales_reps.svg";
 import medical_staff from "../../public/svg/jobRoles/medicalstaff.svg";
 import programmer from "../../public/svg/jobRoles/programmer.svg";
-import manager from "../../public/svg/jobRoles/projectmanager.svg";
-import partner1 from "../../public/images/partners/partner1_.jpeg";
-import xeurix from "../../public/images/partners/xeurix website pics icons.png";
-import icims from "../../public/images/partners/icims.png";
-import jazzhr from "../../public/images/partners/jazzhr.png";
-import greenHouse from "../../public/images/partners/greenhouse.png";
-import lever from "../../public/images/partners/lever_logo.png";
-import breezy from "../../public/images/partners/BreezyHR3.png";
-import taleo from "../../public/images/partners/taleo.png";
+
+// partners
+import breezy from "../../public/images/Breezy.png";
+import teamTailor from "../../public/images/teamtailor.png";
+import greenHouse from "../../public/images/greenhouse.png";
+import lever from "../../public/images/lever_logo.png";
+import workable from "../../public/images/Workable.png";
+import icims from "../../public/images/icims.png";
+import jazzhr from "../../public/images/jazzhr.png";
+import applicantStack from "../../public/images/Applicant_Stack.png";
 
 const homeNavLinks = [
   {
-    name: "Product",
-    path: "#product",
+    name: "Home",
+    path: "#home",
   },
   {
     name: "Assessment",
     path: "#assessment",
   },
   {
-    name: "By Industry",
-    path: "#byIndustry",
+    name: "Benefits",
+    path: "#benefits",
+  },
+  {
+    name: "Platform",
+    path: "#platform",
+  },
+  {
+    name: "Impact",
+    path: "#impact",
   },
   {
     name: "Job Roles",
     path: "#jobRoles",
-  },
-  {
-    name: "Resources",
-    path: "#resources",
   },
   {
     name: "FAQs",
@@ -64,34 +75,10 @@ const otherNavLinks = [
   },
 ];
 
-const PlatformData = [
-  {
-    heading: "Tailored Simulations",
-    paragraph:
-      "We meticulously analyze your job description and organizational culture to identify the skills most predictive of job success. Our AI then matches these requirements with our extensive library of job scenarios to create a realistic simulation that accurately predicts job performance and cultural fit.",
-    image: Tailored_Simulations,
-    alt: "hyper-customized tailored job simulation using job description, company culture, and industry data.",
-  },
-  {
-    heading: "Custom AI Characters",
-    paragraph:
-      "Each job scenario features custom-trained AI characters that emulate real-life colleagues and workplace challenges. These characters interact with candidates in real-time, providing a realistic and immersive evaluation experience.",
-    image: ai_characters,
-    alt: "Custom trained AI characters to simulation real-life work characters for a realistic job simulation.",
-  },
-  {
-    heading: "In-Depth Evaluations",
-    paragraph:
-      "Our AI analyzes thousands of data points to provide detailed insights into candidates' strengths and weaknesses. We generate tailored interview questions based on their performance, ensuring informed hiring decisions based on measurable metrics.",
-    image: ai_evaluation,
-    alt: "In-depth candidate performance analytics and hiring metrics based on objective simulation data.",
-  },
-];
-
 const hireSmarterData = [
   {
     title: "Boost Job Fit",
-    image: boostJobFit,
+    image: ai_evaluation,
     paragraph:
       "Identify candidates who perfectly align with your job requirements and company culture. Xeurix job simulations let you evaluate candidates' true abilities in real-time scenarios. Our detailed job fit scores offer insights into candidates' personality, soft skills, reasoning, and job-related skills. This ensures a strong match for long-term success, reduced turnover, and enhanced team productivity.",
     alt: "Candidate detail assessment with precise job fit score, evaluated on personality, soft skills, reasoning, and job-specific skills.",
@@ -109,6 +96,30 @@ const hireSmarterData = [
     paragraph:
       "Ensure fair hiring decisions by relying on measurable performance metrics instead of subjective judgment. Xeurix's objective evaluations assess candidates' true abilities and potential in realistic scenarios. This approach promotes diversity and inclusion, enabling you to select the best fit for your team based on evidence, not biases.",
     alt: "Fair hiring decisions based on objective data to eliminate bias and subjectivity from recruiting.",
+  },
+];
+
+const PlatformData = [
+  {
+    heading: "Tailored Simulations",
+    paragraph:
+      "We meticulously analyze your job description and work culture to identify the skills most predictive of job success. We then match these requirements with our library of job scenarios to create a simulation that predicts job performance and cultural fit.",
+    image: Tailored_Simulations,
+    alt: "hyper-customized tailored job simulation using job description, company culture, and industry data.",
+  },
+  {
+    heading: "Custom AI Characters",
+    paragraph:
+      "Each job scenario features custom-trained AI characters that emulate real-life colleagues and workplace challenges. These characters interact with candidates in real-time, providing a realistic and immersive evaluation experience.",
+    image: ai_characters,
+    alt: "Custom trained AI characters to simulation real-life work characters for a realistic job simulation.",
+  },
+  {
+    heading: "In-Depth Evaluations",
+    paragraph:
+      "Our AI analyzes thousands of data points to provide detailed insights into candidates' strengths and weaknesses. We generate tailored interview questions based on their performance, ensuring informed hiring decisions based on measurable metrics.",
+    image: boostJobFit,
+    alt: "In-depth candidate performance analytics and hiring metrics based on objective simulation data.",
   },
 ];
 
@@ -172,32 +183,37 @@ const jobRoles = [
 
 const partners = [
   {
-    image: xeurix,
-    alt: "as",
+    image: breezy,
+    alt: "Breezy Applicant Tracking System",
   },
   {
-    image: icims,
-    alt: "asd",
-  },
-  {
-    image: jazzhr,
-    alt: "sd",
+    image: teamTailor,
+    alt: "Teamtailor Applicant Tracking System",
   },
   {
     image: greenHouse,
-    alt: "da",
+    alt: "Greenhouse applicant tracking system",
   },
   {
     image: lever,
-    alt: "Lever",
+    alt: "Lever Applicant Tracking System",
   },
   {
-    image: breezy,
-    alt: "Breezy",
+    image: workable,
+    alt: "Workable Applicant Tracking System",
   },
   {
-    image: taleo,
-    alt: "Taleo",
+    image: icims,
+    alt: "icims Applicant Tracking System",
+  },
+
+  {
+    image: jazzhr,
+    alt: "JazzHR Applicant Tracking System",
+  },
+  {
+    image: applicantStack,
+    alt: "ApplicantStack Applicant Tracking System",
   },
 ];
 
@@ -276,6 +292,96 @@ const legalItems = [
   },
 ];
 
+const impactData = [
+  {
+    title: "Manual Evaluation",
+    content:
+      "Manual evaluation rely on human intuition and manual processes to evaluate candidates. This method involves reviewing resumes, conducting interviews, and making subjective decisions.",
+    numbers: [0, 0, 0],
+    subHeading: [
+      {
+        title: "Time Saved",
+        text: "Limited time savings due to extensive manual processes and no automation .",
+      },
+      {
+        title: "Employee Retention",
+        text: "Lower retention rates due to potential biases and less accurate job fit assessments",
+      },
+      {
+        title: "Employee Productivity",
+        text: "Productivity may suffer due to less precise candidate-job matches.",
+      },
+    ],
+    active: true,
+  },
+  {
+    title: "Resume Matching",
+    content:
+      "Resume screening involves filtering candidates based on their resumes. It uses keyword matching and basic criteria to shortlist applicants but may miss key skills and potential.",
+    numbers: [25, 10, 10],
+    active: true,
+    subHeading: [
+      {
+        title: "Time Saved",
+        text: "Moderate time savings through automated resume filtering based on job keywords.",
+      },
+      {
+        title: "Employee Retention",
+        text: "Retention rates  may not accurately reflect candidate suitability beyond keywords.",
+      },
+      {
+        title: "Employee Productivity",
+        text:
+          "Productivity can be impacted by overlooking soft skills and" +
+          "  " +
+          "real-world capabilities",
+      },
+    ],
+  },
+  {
+    title: "Assessment Tools",
+    content:
+      "Other assessments include psychometric tests, aptitude tests, and standardized assessments. These tools offer additional insights but may not fully capture practical job performance.",
+    numbers: [30, 15, 15],
+    active: true,
+    subHeading: [
+      {
+        title: "Time Saved",
+        text: "Moderate time savings with structured assessment tools and reports.",
+      },
+      {
+        title: "Employee Retention",
+        text: "Improved retention rates compared to manual assessments but still limited.",
+      },
+      {
+        title: "Employee Productivity",
+        text: "Productivity gains are moderate, depending on the alignment of test results with job demands",
+      },
+    ],
+  },
+  {
+    title: "Xeurix Platform",
+    content:
+      "The pinnacle of hiring technology, using AI-driven simulations that place candidates in realistic job scenarios, providing objective and detailed performance evaluations, customizable by employers.",
+    numbers: [50, 30, 30],
+    active: true,
+    subHeading: [
+      {
+        title: "Time Saved",
+        text: "Up to 50% time saved through efficient and accurate assessments.",
+      },
+      {
+        title: "Employee Retention",
+        text: "Up to 30% improvement in employee retention by ensuring precise job fit.",
+      },
+      {
+        title: "Employee Productivity",
+        text: "Up to 30% boost in productivity with candidates accurately assessed for their roles.",
+      },
+    ],
+  },
+];
+
 export {
   homeNavLinks,
   otherNavLinks,
@@ -286,4 +392,5 @@ export {
   faqItems,
   platformItems,
   legalItems,
+  impactData,
 };

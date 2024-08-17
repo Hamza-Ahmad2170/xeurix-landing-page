@@ -1,3 +1,4 @@
+import Button from "./Button";
 import Heading from "./Heading";
 import ImpactCountDown from "./ImpactCountDown";
 import MaxScreen from "./MaxScreen";
@@ -6,8 +7,8 @@ import SectionHeader from "./SectionHeader";
 
 export default function Impact() {
   return (
-    <section className="hidden sm:block">
-      <div className="max-w-6xl px-4 mx-auto">
+    <section className="" id="impact">
+      <div className="mx-auto max-w-6xl px-4">
         <MaxScreen>
           <SectionHeader>
             <Heading>Why Xeurix: The Impact?</Heading>
@@ -18,6 +19,9 @@ export default function Impact() {
             </Paragraph>
           </SectionHeader>
           <ImpactCountDown />
+          <div className="pt-16 text-center">
+            <Button>Request Demo</Button>
+          </div>
         </MaxScreen>
       </div>
     </section>

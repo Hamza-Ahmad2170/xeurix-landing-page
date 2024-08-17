@@ -2,6 +2,7 @@ import Link from "next/link";
 import NavLinks from "./NavLinks";
 import Logo from "../svg/logo";
 import DemoSvg from "../svg/Demo";
+import Button from "../Button";
 
 export default function NavBar() {
   return (
@@ -15,17 +16,17 @@ export default function NavBar() {
             <NavLinks />
           </ul>
         </nav>
-        <div className="hidden items-center xl:flex">
+        <div className="hidden items-center font-bold xl:flex">
           <Link href="https://app.xeurix.com/" className="px-4 py-5">
             Login
           </Link>
-          <Link
-            href="/demo"
-            className="relative z-20 flex items-center justify-between gap-4 overflow-hidden rounded-full bg-[#d4145a] px-5 py-3 text-lg text-white transition-all duration-700 before:absolute before:left-1/2 before:top-full before:-z-10 before:h-52 before:w-56 before:-translate-x-1/2 before:translate-y-0 before:rounded-full before:bg-[#28A8DF] before:transition-all before:duration-700 hover:before:translate-y-[-50%]"
+          <Button
+            variant="pill"
+            className="flex items-center justify-between gap-2"
           >
             <DemoSvg />
-            Request Demo
-          </Link>
+            <Link href="/demo">Request Demo</Link>
+          </Button>
         </div>
       </div>
     </header>
