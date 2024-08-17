@@ -5,3 +5,33 @@
 .gradient-job-fit {
   background: linear-gradient(135deg, #e2eff4, #ebe0e0);
 }
+
+
+
+.partners:nth-of-type(1) img {
+  width: 13rem;
+}
+.partners:nth-of-type(2) img {
+  width: 11rem;
+}
+.partners:nth-of-type(3) img {
+  width: 10rem;
+}
+.partners:nth-of-type(4) img {
+  width: 13rem;
+}
+.partners:nth-of-type(5) img {
+  width: 13rem;
+}
+.partners:nth-of-type(5) img {
+  width: 10rem;
+}
+.partners:nth-of-type(6) img {
+  width: 13rem;
+}
+.partners:nth-of-type(7) img {
+  width: 10rem;
+}
+.partners:nth-of-type(8) img {
+  width: 14rem;
+}

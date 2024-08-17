@@ -16,8 +16,8 @@ export default function HireSmarter() {
       <div className="mx-auto max-w-6xl px-4">
         <MaxScreen>
           <FadeUp>
-            <SectionHeader className="pt-20">
-              <Heading>Elevate Your Hiring Game</Heading>
+            <SectionHeader className="pt-4 lg:pt-20">
+              <Heading className="text-2xl">Elevate Your Hiring Game</Heading>
               <Paragraph className="max-w-3xl">
                 Leverage AI-Powered Job Simulations for Smarter, Faster, and
                 Bias-Free Hiring Decisions.
@@ -27,7 +27,7 @@ export default function HireSmarter() {
           {hireSmarterData.map((data, index) => (
             <div
               key={index}
-              className="flex flex-wrap gap-x-8 gap-y-12 py-12 sm:py-20"
+              className="flex flex-wrap gap-x-8 gap-y-12 py-6 sm:py-20"
             >
               <div
                 className={cn(
@@ -49,9 +49,9 @@ export default function HireSmarter() {
               </FadeUp>
             </div>
           ))}
-          <div className="text-center">
+          <FadeUp className="text-center">
             <Button>Request Demo</Button>
-          </div>
+          </FadeUp>
         </MaxScreen>
       </div>
     </section>

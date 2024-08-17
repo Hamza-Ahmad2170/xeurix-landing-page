@@ -24,19 +24,18 @@ export default function Partners() {
             {partners.map((partner) => (
               <FadeUp
                 key={partner.alt}
-                className="flex h-full items-center justify-center bg-white px-4 shadow-xl"
+                className="partners mx-auto flex items-center justify-center bg-white px-4 shadow-xl lg:size-[268px]"
               >
                 <Image
                   src={partner.image}
                   alt={partner.alt}
                   key={partner.alt}
-                  className="aspect-square w-32 object-contain"
                 />
               </FadeUp>
             ))}
           </div>
           <div className="text-center">
-            <p className="font-bold">And more</p>
+            <p className="text-xl font-bold">And more</p>
           </div>
         </MaxScreen>
       </div>

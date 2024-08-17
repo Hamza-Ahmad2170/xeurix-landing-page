@@ -5,7 +5,7 @@ import eliminate_bias from "../../public/images/eliminate_bias.png";
 
 // platform
 import Tailored_Simulations from "../../public/images/Tailored_Simulations.png";
-import ai_characters from "../../public/images/ai_characters.png";
+import ai_characters from "../../public/images/ai-characters.png";
 import boostJobFit from "../../public/images/boost_jobfit.png";
 
 // job roles
@@ -253,28 +253,13 @@ const faqItems = [
 const platformItems = [
   {
     name: "Login",
-    path: "/login",
+    path: "https://app.xeurix.com/",
   },
   {
     name: "SignUp",
-    path: "/signup",
+    path: "https://app.xeurix.com/register",
   },
-  {
-    name: "Features",
-    path: "/features",
-  },
-  {
-    name: "Benefits",
-    path: "/benefits",
-  },
-  {
-    name: "Use Cases",
-    path: "/use-cases",
-  },
-  {
-    name: "FAQ",
-    path: "/faq",
-  },
+  ...homeNavLinks,
 ];
 
 const legalItems = [

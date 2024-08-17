@@ -8,7 +8,7 @@ import globBottom from "../../public/images/globe_bottom.png";
 
 export default function Glob() {
   return (
-    <section className="mx-auto max-w-6xl px-4 py-20">
+    <section className="mx-auto max-w-6xl px-4 pt-20">
       <FadeUp>
         <Image
           src={glob}

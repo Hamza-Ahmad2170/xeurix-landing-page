@@ -14,7 +14,7 @@ export default function JobRoles() {
         <MaxScreen>
           <FadeUp>
             <SectionHeader>
-              <Heading className="text-3xl">Job Roles</Heading>
+              <Heading className="text-4xl">Job Roles</Heading>
               <Paragraph className="max-w-2xl">
                 Our platform is designed to meet the needs for virtually any job
                 role from entry level to senior leadership role.

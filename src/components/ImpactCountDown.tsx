@@ -21,7 +21,7 @@ export default function ImpactCountDown() {
   };
 
   return (
-    <div className="mx-auto max-w-6xl pt-16">
+    <div className="mx-auto max-w-6xl pt-6 lg:pt-16">
       <ul className="hidden justify-between rounded-md bg-slate-600/20 md:flex">
         {impactData.map((data, index) => (
           <li
@@ -65,7 +65,7 @@ export default function ImpactCountDown() {
               />
             )}
             <span className="text-[5rem] font-semibold">%</span>
-            <p className="py-4 text-2xl font-semibold">
+            <p className="pb-3 text-2xl font-semibold">
               {impactData[activeTabIndex].subHeading[index].title}
             </p>
             <p className="text-[1.38rem]">

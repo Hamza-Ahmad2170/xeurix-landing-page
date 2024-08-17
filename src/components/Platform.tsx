@@ -13,7 +13,7 @@ export default function Platform() {
         <MaxScreen>
           <FadeUp>
             <SectionHeader>
-              <Heading>AI-Powered Hiring Platform</Heading>
+              <Heading className="text-2xl">AI-Powered Hiring Platform</Heading>
               <Paragraph className="max-w-4xl">
                 Every job is unique, and so is our assessment approach. At
                 Xeurix, we harness AI to create hyper-customized simulations
@@ -30,9 +30,7 @@ export default function Platform() {
                 >
                   <Image src={platform.image} alt={platform.heading} />
                   <div className="space-y-2 px-4 pb-10 pt-4">
-                    <h3 className="text-center text-2xl font-bold">
-                      {platform.heading}
-                    </h3>
+                    <h3 className="text-2xl font-bold">{platform.heading}</h3>
                     <p> {platform.paragraph}</p>
                   </div>
                 </li>

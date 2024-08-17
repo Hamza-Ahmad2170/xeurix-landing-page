@@ -10,9 +10,9 @@ export default function JobFit() {
   return (
     <section className="gradient-job-fit relative" id="home">
       <div className="container">
-        <MaxScreen className="flex min-h-[calc(100dvh-66px)] flex-col items-center lg:justify-between xl:flex-row">
-          <div className="order-2 space-y-7 py-20 xl:order-1 xl:basis-3/5 xl:py-0">
-            <h1 className="text-2xl leading-relaxed sm:text-4xl sm:leading-relaxed lg:text-6xl lg:leading-relaxed 2xl:text-7xl 2xl:leading-relaxed">
+        <MaxScreen className="flex min-h-[calc(100dvh-66px)] flex-col items-center py-10 lg:justify-between xl:flex-row">
+          <div className="order-2 space-y-7 py-6 xl:order-1 xl:basis-3/5 xl:py-0">
+            <h1 className="text-[1.5rem] leading-relaxed sm:text-4xl sm:leading-relaxed lg:text-6xl lg:leading-relaxed 2xl:text-7xl 2xl:leading-relaxed">
               The world’s first
               <span className="font-extrabold">
                 <br /> AI-Driven Job Simulations
@@ -23,8 +23,8 @@ export default function JobFit() {
               Precisely assess job-fit, cultural-fit, skills with advanced job
               simulations and data-powered insights.
             </p>
-            <Button className="inline-block w-40" variant="pill">
-              Free Trial
+            <Button className="inline-block" variant="pill">
+              Request Free Trial
             </Button>
           </div>
           <div className="order-1 hidden xl:order-2 xl:block xl:basis-2/5">
