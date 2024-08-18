@@ -4,6 +4,7 @@ import ImpactCountDown from "./ImpactCountDown";
 import MaxScreen from "./MaxScreen";
 import Paragraph from "./Paragraph";
 import SectionHeader from "./SectionHeader";
+import Link from "next/link";
 
 export default function Impact() {
   return (
@@ -27,7 +28,9 @@ export default function Impact() {
           </SectionHeader>
           <ImpactCountDown />
           <div className="pt-16 text-center">
-            <Button>Request Demo</Button>
+            <Button>
+              <Link href="/demo">Request Demo</Link>
+            </Button>
           </div>
         </MaxScreen>
       </div>

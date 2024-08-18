@@ -2,7 +2,7 @@ import Heading from "./Heading";
 import MaxScreen from "./MaxScreen";
 import Paragraph from "./Paragraph";
 import SectionHeader from "./SectionHeader";
-
+import Link from "next/link";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
 
@@ -53,7 +53,9 @@ export default function HireSmarter() {
             </div>
           ))}
           <FadeUp className="text-center">
-            <Button>Request Demo</Button>
+            <Button>
+              <Link href="/demo">Request Demo</Link>
+            </Button>
           </FadeUp>
         </MaxScreen>
       </div>

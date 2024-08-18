@@ -5,6 +5,7 @@ import Image from "next/image";
 import laptopHalf from "../../public/images/laptop_isometric.png";
 import laptopFull from "../../public/images/laptop_banner.png";
 import Button from "./Button";
+import Link from "next/link";
 
 export default function JobFit() {
   return (
@@ -24,7 +25,7 @@ export default function JobFit() {
               simulations and data-powered insights.
             </p>
             <Button className="inline-block" variant="pill">
-              Request Free Trial
+              <Link href="/demo">Request Free Trial</Link>
             </Button>
           </div>
           <div className="order-1 hidden xl:order-2 xl:block xl:basis-2/5">

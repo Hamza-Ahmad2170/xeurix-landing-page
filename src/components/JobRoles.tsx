@@ -6,6 +6,7 @@ import Image from "next/image";
 import { jobRoles } from "@/lib/data";
 import Button from "./Button";
 import FadeUp from "./FadeUp";
+import Link from "next/link";
 
 export default function JobRoles() {
   return (
@@ -40,8 +41,9 @@ export default function JobRoles() {
               ))}
             </div>
             <div className="pt-14 text-center">
-              {/* <p className="font-bold pb-8">And many more</p> */}
-              <Button className="inline-block">Get Started</Button>
+              <Button className="inline-block">
+                <Link href="/demo">Get Started</Link>
+              </Button>
             </div>
           </MaxScreen>
         </div>

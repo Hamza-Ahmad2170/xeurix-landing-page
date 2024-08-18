@@ -3,7 +3,7 @@ import MaxScreen from "@/components/MaxScreen";
 export default function Page() {
   return (
     <div className="bg-white bg-[url('/images/gameBackground.png')] bg-cover bg-top bg-no-repeat">
-      <MaxScreen className="min-h-[calc(100dvh-100px)] items-center justify-center">
+      <div className="flex h-[calc(100dvh-100px)] items-center justify-center py-0">
         <div className="mx-auto w-full max-w-[500px] rounded-md bg-white p-12 text-sm">
           <h1 className="mb-6 text-[1.75rem] font-semibold">Request demo</h1>
           <form className="space-y-8">
@@ -57,7 +57,7 @@ export default function Page() {
             </button>
           </form>
         </div>
-      </MaxScreen>
+      </div>
     </div>
   );
 }
