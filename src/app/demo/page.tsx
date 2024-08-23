@@ -11,10 +11,10 @@ export default function Page() {
           </h1>
           <>
             <Demo />
-            {/* <Calendar /> */}
           </>
         </div>
       </div>
+      <Calendar />
     </div>
   );
 }

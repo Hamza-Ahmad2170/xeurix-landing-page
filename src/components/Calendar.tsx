@@ -5,9 +5,9 @@ import { useEffect } from "react";
 export default function Calendar() {
   useEffect(() => {
     const div = document.createElement("div");
-    div.setAttribute("name", "termly-embed");
-    div.setAttribute("data-id", "875bd76c-0397-4e4c-9693-c45f9f633e0c");
-    div.setAttribute("data-type", "iframe");
+    // div.setAttribute("name", "termly-embed");
+    div.setAttribute("data-url", "https://calendly.com/xeurix/demo");
+    // div.setAttribute("data-type", "iframe");
 
     const policy = document.getElementById("policy");
     if (policy) {
@@ -34,5 +34,9 @@ export default function Calendar() {
     };
   }, []);
 
-  return <div id="policy"></div>;
+  return (
+    <div>
+      <div id="policy" className="calendly-inline-widget"></div>
+    </div>
+  );
 }
