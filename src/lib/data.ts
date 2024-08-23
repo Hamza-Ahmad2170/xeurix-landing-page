@@ -67,7 +67,7 @@ const otherNavLinks = [
   },
   {
     name: "Contact us",
-    path: "/contact-us",
+    path: "/contactus",
   },
   {
     name: "Blogs",
@@ -286,11 +286,11 @@ const impactData = [
     subHeading: [
       {
         title: "Time Saved",
-        text: "Limited time savings due to extensive manual processes and no automation .",
+        text: "Limited time savings due to extensive manual processes and no automation.",
       },
       {
         title: "Employee Retention",
-        text: "Lower retention rates due to potential biases and less accurate job fit assessments",
+        text: "Lower retention rates due to potential biases and less accurate job fit.",
       },
       {
         title: "Employee Productivity",
@@ -308,18 +308,15 @@ const impactData = [
     subHeading: [
       {
         title: "Time Saved",
-        text: "Moderate time savings through automated resume filtering based on job keywords.",
+        text: "Moderate time savings through auto resume filtering based on job keywords.",
       },
       {
         title: "Employee Retention",
-        text: "Retention rates  may not accurately reflect candidate suitability beyond keywords.",
+        text: "Retention rates may not reflect candidate suitability beyond keywords.",
       },
       {
         title: "Employee Productivity",
-        text:
-          "Productivity can be impacted by overlooking soft skills and" +
-          "  " +
-          "real-world capabilities",
+        text: "Productivity can be impacted by overlooking soft skills and real-life skills",
       },
     ],
   },
@@ -340,7 +337,7 @@ const impactData = [
       },
       {
         title: "Employee Productivity",
-        text: "Productivity gains are moderate, depending on the alignment of test results with job demands",
+        text: "Productivity gains are limited due to lack of practical job assessment.",
       },
     ],
   },
@@ -361,7 +358,7 @@ const impactData = [
       },
       {
         title: "Employee Productivity",
-        text: "Up to 30% boost in productivity with candidates accurately assessed for their roles.",
+        text: "Up to 30% boost in productivity with candidates precisely assessed.",
       },
     ],
   },

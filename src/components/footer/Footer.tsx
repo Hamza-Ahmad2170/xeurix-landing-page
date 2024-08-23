@@ -40,10 +40,25 @@ export default function Footer() {
             <ul className="uppercase">
               <li>
                 <Link
-                  href="/blog"
+                  href="/blogs"
                   className="text-xs font-medium text-[#a3b0bd]"
                 >
                   Blog
+                </Link>
+              </li>
+            </ul>
+          </div>
+          <div className="w-full max-w-40">
+            <h5 className="mb-4 space-y-2 text-[1.25rem] font-bold text-white">
+              Contact Us
+            </h5>
+            <ul className="uppercase">
+              <li>
+                <Link
+                  href="/contactus"
+                  className="text-xs font-medium text-[#a3b0bd]"
+                >
+                  contact form
                 </Link>
               </li>
             </ul>

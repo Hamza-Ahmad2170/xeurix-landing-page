@@ -8,13 +8,16 @@ import Link from "next/link";
 function BlogSingle() {
   const { slug } = useParams();
   const blogData = blogsData.find((blog) => blog.slug === slug);
+  if (!blogData) {
+    return <div>Blog not found</div>;
+  }
 
   return (
     <div className="py-10">
       <div className="container">
-        <Image src={world} alt="blog" />
+        <Image src={world} alt={blogData.title} title={blogData.title} />
         <div className="pt-10">
-          <h1 className="text-[1.75rem]">{blogData?.title}</h1>
+          <h1 className="text-[1.75rem]">{blogData.title}</h1>
           <article className="text-sm font-light text-[#272b41]">
             <h2 className="py-2 text-[2.5rem] leading-tight">
               NETSOL Cloud Services Achieves AWS Lambda Service Delivery

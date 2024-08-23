@@ -21,17 +21,17 @@ export default function ImpactCountDown() {
   };
 
   return (
-    <div className="mx-auto max-w-6xl pt-6 lg:pt-16">
-      <ul className="hidden justify-between rounded-md bg-slate-600/20 md:flex">
+    <div className="mx-auto max-w-6xl pt-6 lg:pt-8">
+      <ul className="mx-auto hidden max-w-4xl justify-between rounded-md bg-slate-600/20 md:flex 2xl:max-w-5xl">
         {impactData.map((data, index) => (
           <li
             key={index}
             onClick={() => handleTabChange(index)}
-            className={`relative basis-1/2 rounded-md py-4 text-center ${
+            className={`relative basis-1/2 rounded-md py-3 text-center ${
               activeTabIndex === index ? "bg-[#d4145a] text-white" : ""
             }`}
           >
-            <button className="text-lg lg:text-[1.5rem]">
+            <button className="text-xl 2xl:text-[1.5rem]">
               {activeTabIndex === index && (
                 <span className="absolute left-[45%] top-full h-0 w-0 border-x-8 border-t-[16px] border-x-transparent border-t-[#d4145a]"></span>
               )}
@@ -41,12 +41,12 @@ export default function ImpactCountDown() {
         ))}
       </ul>
 
-      <p className="hidden py-8 text-center text-2xl md:block">
+      <p className="hidden py-8 text-center md:block lg:text-xl 2xl:text-2xl">
         {impactData[activeTabIndex].content}
       </p>
 
       <div
-        className="flex flex-wrap items-stretch justify-center gap-x-4 gap-y-20 py-8 md:flex-row lg:justify-between"
+        className="flex flex-wrap items-stretch justify-center gap-x-4 gap-y-20 md:flex-row 2xl:justify-between"
         ref={ref}
       >
         {impactData[activeTabIndex].numbers.map((num, index) => (
@@ -68,7 +68,7 @@ export default function ImpactCountDown() {
             <p className="pb-3 text-2xl font-semibold">
               {impactData[activeTabIndex].subHeading[index].title}
             </p>
-            <p className="text-[1.38rem]">
+            <p className="text-lg 2xl:text-[1.38rem]">
               {impactData[activeTabIndex].subHeading[index].text}
             </p>
           </div>

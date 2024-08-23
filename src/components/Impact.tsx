@@ -1,10 +1,11 @@
-import Button from "./Button";
+import BtnLink from "./BtnLink";
+
+import Container from "./Container";
 import Heading from "./Heading";
 import ImpactCountDown from "./ImpactCountDown";
 import MaxScreen from "./MaxScreen";
 import Paragraph from "./Paragraph";
 import SectionHeader from "./SectionHeader";
-import Link from "next/link";
 
 export default function Impact() {
   return (
@@ -12,7 +13,7 @@ export default function Impact() {
       className="bg-[url('/images/pattern/parallax-4.jpg')] bg-no-repeat"
       id="impact"
     >
-      <div className="mx-auto max-w-6xl px-4">
+      <Container>
         <MaxScreen>
           <SectionHeader>
             <Heading className="text-3xl">Why Xeurix: The Impact?</Heading>
@@ -28,12 +29,10 @@ export default function Impact() {
           </SectionHeader>
           <ImpactCountDown />
           <div className="pt-16 text-center">
-            <Button>
-              <Link href="/demo">Request Demo</Link>
-            </Button>
+            <BtnLink href="/demo">Request Demo</BtnLink>
           </div>
         </MaxScreen>
-      </div>
+      </Container>
     </section>
   );
 }

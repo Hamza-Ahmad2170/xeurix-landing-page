@@ -11,7 +11,7 @@ import FadeUp from "../FadeUp";
 export default function FAQ() {
   return (
     <div className="bg-[#f4f5f7] py-10" id="faqs">
-      <div className="bg-[url('/images/gameBackground.png')] bg-right bg-no-repeat">
+      <div className="bg-[url('/images/gameBackground.png')] bg-right bg-no-repeat ">
         <div className="container">
           <MaxScreen className="gap-10">
             <FadeUp>
@@ -28,7 +28,7 @@ export default function FAQ() {
             </FadeUp>
 
             <Accordion
-              className="flex w-full flex-wrap justify-center pt-20 sm:gap-4 xl:flex-nowrap"
+              className="flex w-full flex-wrap justify-center gap-4 pt-20 xl:flex-nowrap"
               allowZeroExpanded
             >
               <FadeUp className="w-full xl:basis-1/2">

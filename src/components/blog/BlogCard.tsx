@@ -19,7 +19,8 @@ function BlogCard({ card }: BlogCardProps) {
     <div className="relative flex basis-96 flex-col rounded-3xl shadow-2xl xl:basis-80">
       <Image
         src={cardImg}
-        alt="blog"
+        alt={card.title}
+        title={card.title}
         className="relative rounded-t-3xl shadow-2xl"
       />
 

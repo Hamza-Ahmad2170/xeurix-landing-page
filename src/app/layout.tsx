@@ -13,9 +13,25 @@ const arial = localFont({
 });
 
 export const metadata: Metadata = {
-  title: " Xeurix - AI-Powered 3D Job Simulations for Better Hiring Decisions",
+  title: "AI-Powered Job Simulations and Recruiting Platform",
   description:
     "Revolutionize your hiring with Xeurix's recruiting platform. Boost job fit, streamline hiring, and enhance employee retention with AI-driven job simulations",
+  alternates: {
+    canonical: "https://www.xeurix.com/",
+  },
+  openGraph: {
+    title: "AI-Powered Job Simulations and Recruiting Platform",
+    description:
+      "Revolutionize your hiring with Xeurix's recruiting platform. Boost job fit, streamline hiring, and enhance employee retention with AI-driven job simulations",
+    url: "https://www.xeurix.com/",
+    images: [
+      {
+        url: "https://www.xeurix.com/images/og-image.jpg",
+        alt: "Xeurix OG Image",
+      },
+    ],
+    type: "website",
+  },
 };
 
 export default function RootLayout({
@@ -24,7 +40,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="!scroll-smooth">
+    <html lang="en" className="scroll-p-8 !scroll-smooth">
       <body className={`${manrope.className + " " + arial.variable} `}>
         <NavBar />
         <MobileNav />

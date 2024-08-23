@@ -10,13 +10,14 @@ function FooterInput() {
   const [email, setEmail] = useState("");
   const [show, setShow] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<false | string>(false);
 
   const handleNewsLetter = async (event: React.FormEvent) => {
     event.preventDefault();
-    console.log(apiUrl);
 
     try {
-      const api = await fetch(apiUrl + "add/lead/to/campaign", {
+      setLoading(true);
+      const api = await fetch(apiUrl + "add/lead/to/campeign", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -25,36 +26,40 @@ function FooterInput() {
           email,
         }),
       });
-      const res = await api.json();
-      console.log(res);
+      if (!api.ok) throw new Error("Something went wrong");
+      await api.json();
+      setEmail("");
     } catch (error) {
+      if (error instanceof Error) setError(error.message);
       console.log(error);
+    } finally {
+      setLoading(false);
     }
 
-    // if (!error) {
-    //   setShow(true);
-    //   setTimeout(() => {
-    //     setShow(false);
-    //   }, 5000);
-    //   toast.success("success", {
-    //     position: "top-center",
-    //     autoClose: 5000,
-    //     hideProgressBar: true,
-    //     closeOnClick: true,
-    //     pauseOnHover: false,
-    //     draggable: false,
-    //     progress: undefined,
-    //     theme: "light",
+    if (!error) {
+      setShow(true);
+      setTimeout(() => {
+        setShow(false);
+      }, 5000);
+      toast.success("success", {
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: true,
+        closeOnClick: true,
+        pauseOnHover: false,
+        draggable: false,
+        progress: undefined,
+        theme: "light",
 
-    //     style: {
-    //       width: "max-content",
-    //       margin: "0 auto",
-    //       minHeight: "max-content",
-    //       fontSize: "1.1rem",
-    //       padding: "0 .5rem",
-    //     },
-    //   });
-    // }
+        style: {
+          width: "max-content",
+          margin: "0 auto",
+          minHeight: "max-content",
+          fontSize: "1.1rem",
+          padding: "0 .5rem",
+        },
+      });
+    }
   };
 
   return (
@@ -68,15 +73,13 @@ function FooterInput() {
           className="focus: block w-full rounded-md border-0 bg-[rgba(41,171,226,.5)] px-4 py-3 text-sm placeholder:font-light placeholder:text-black focus:border-0 focus:shadow-lg focus:shadow-[#29abe240] focus-visible:shadow-lg focus-visible:shadow-[#29abe240] focus-visible:outline-none focus-visible:outline-[#29abe240]"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          // pattern="/[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/g"
         />
         <button
           type="submit"
           className="absolute right-0 top-[6px] z-20 rounded-[3px] bg-[#d4145a] px-5 py-1 text-white"
-          // disabled={loading}
+          disabled={loading}
         >
-          {/* {loading ? "Submitting..." : "Subscribe"} */}
-          Subscribe
+          {loading ? "Submitting..." : "Subscribe"}
         </button>
         <p className="list text-white">
           <small>* We promise not spam you</small>

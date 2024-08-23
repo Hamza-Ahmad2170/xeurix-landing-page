@@ -7,7 +7,7 @@ interface Props {
 
 export default function NavBtn({ isOpen, setIsOpen }: Props) {
   return (
-    <div className="xl:hidden">
+    <div>
       <button
         className="rounded-md bg-white p-2 text-gray-700 outline-none focus:border focus:border-gray-400"
         onClick={() => setIsOpen(!isOpen)}

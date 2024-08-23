@@ -1,45 +1,55 @@
-import React from "react";
 import MaxScreen from "./MaxScreen";
-
 import Image from "next/image";
-import laptopHalf from "../../public/images/laptop_isometric.png";
-import laptopFull from "../../public/images/laptop_banner.png";
-import Button from "./Button";
-import Link from "next/link";
+
+// image
+import laptop from "../../public/images/laptop_banner.png";
+import laptopBanner from "../../public/images/laptop_isometric.png";
+import BtnLink from "./BtnLink";
 
 export default function JobFit() {
   return (
-    <section className="gradient-job-fit relative" id="home">
-      <div className="container">
-        <MaxScreen className="flex min-h-[calc(100dvh-66px)] flex-col items-center py-10 lg:justify-between xl:flex-row">
-          <div className="order-2 space-y-7 py-6 xl:order-1 xl:basis-3/5 xl:py-0">
-            <h1 className="text-[1.5rem] leading-relaxed sm:text-4xl sm:leading-relaxed lg:text-6xl lg:leading-relaxed 2xl:text-7xl 2xl:leading-relaxed">
-              The World’s First
-              <span className="font-extrabold">
-                <br /> AI-Driven Job Simulations
-              </span>
-              <br /> For Hiring.
-            </h1>
-            <p className="max-w-3xl text-lg sm:text-2xl">
-              Precisely assess job-fit, cultural-fit, skills with advanced job
-              simulations and data-powered insights.
-            </p>
-            <Button className="inline-block" variant="pill">
-              <Link href="/demo">Request Free Trial</Link>
-            </Button>
+    <section id="home">
+      <div className="gradient-job-fit pb-10 lg:py-10 2xl:py-0">
+        <div className="container">
+          <div className="flex min-h-[calc(100dvh-90px)] flex-col py-10 lg:flex-row lg:items-center 2xl:py-0">
+            <div className="order-last w-full space-y-3 py-10 md:space-y-5 lg:-order-last lg:w-1/2 lg:py-0">
+              <h1 className="text-[1.5rem] leading-relaxed sm:text-4xl sm:leading-relaxed lg:text-5xl lg:leading-relaxed 2xl:text-[3.8rem] 2xl:leading-relaxed">
+                The World’s First
+                <br />
+                <span className="font-extrabold">
+                  AI-Driven Job Simulations
+                </span>
+                <br />
+                For Hiring.
+              </h1>
+              <p className="max-w-3xl text-lg sm:text-2xl">
+                Precisely assess job-fit, cultural-fit, skills with advanced job
+                simulations and data-powered insights.
+              </p>
+              <div className="pt-2">
+                <BtnLink className="inline-block" variant="pill" href="/demo">
+                  Request Free Trial
+                </BtnLink>
+              </div>
+            </div>
+            <div className="w-full lg:w-1/2">
+              <Image
+                src={laptop}
+                alt="3D job simulation in a virtual office where candidate is performing life-like tasks for a realistic job role evaluation and enhanced talent acquisition."
+                priority
+                title="3D job simulation in a virtual office where candidate is performing life-like tasks for a realistic job role evaluation and enhanced talent acquisition."
+                className="lg:hidden"
+              />
+              <Image
+                src={laptopBanner}
+                alt="3D job simulation in a virtual office where candidate is performing life-like tasks for a realistic job role evaluation and enhanced talent acquisition."
+                priority
+                title="3D job simulation in a virtual office where candidate is performing life-like tasks for a realistic job role evaluation and enhanced talent acquisition."
+                className="absolute right-0 top-[55%] hidden w-[600px] -translate-y-1/2 translate-x-0 lg:block 2xl:top-1/2 2xl:w-[900px]"
+              />
+            </div>
           </div>
-          <div className="order-1 hidden xl:order-2 xl:block xl:basis-2/5">
-            <Image
-              src={laptopHalf}
-              alt="3D job simulation in a virtual office where candidate is performing life-like tasks for a realistic job role evaluation and enhanced talent acquisition."
-              priority
-              className="absolute right-0 top-1/2 -translate-y-[55%] max-[1800px]:max-w-[900px] max-[1600px]:max-w-[700px] min-[1800px]:max-w-[900px]"
-            />
-          </div>
-          <div className="order-1 block basis-full xl:order-2 xl:hidden">
-            <Image src={laptopFull} alt="laptop" priority className="" />
-          </div>
-        </MaxScreen>
+        </div>
       </div>
     </section>
   );
