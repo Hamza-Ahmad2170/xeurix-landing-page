@@ -17,7 +17,7 @@ export default function Seeing() {
             src={pattern}
             alt="pattern"
             title="pattern"
-            className="absolute left-0 lg:w-[175px] 2xl:left-auto 2xl:w-auto"
+            className="absolute left-0 z-50 lg:w-[175px] 2xl:w-auto laptop:w-[175px]"
           />
           <FadeUp>
             <Container>

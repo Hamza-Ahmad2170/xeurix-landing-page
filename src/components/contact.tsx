@@ -30,7 +30,12 @@ export default function Contact() {
       });
       if (!api.ok) throw new Error("Something went wrong");
       await api.json();
-      // setEmail("");
+      setFormData({
+        first_name: "",
+        last_name: "",
+        email: "",
+        message: "",
+      });
     } catch (error) {
       if (error instanceof Error) setError(error.message);
       console.log(error);

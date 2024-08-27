@@ -1,5 +1,5 @@
 {
-  "name": "new-landing-page",
+  "name": "fix_xeurix",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -11,16 +11,16 @@
   "dependencies": {
     "aos": "^2.3.4",
     "clsx": "^2.1.1",
-    "next": "14.2.5",
+    "next": "14.2.6",
     "react": "^18",
     "react-accessible-accordion": "^5.0.0",
     "react-countup": "^6.5.3",
     "react-dom": "^18",
-    "react-icons": "^5.2.1",
+    "react-icons": "^5.3.0",
     "react-intersection-observer": "^9.13.0",
     "react-toastify": "^10.0.5",
     "sharp": "^0.33.5",
-    "tailwind-merge": "^2.5.0"
+    "tailwind-merge": "^2.5.2"
   },
   "devDependencies": {
     "@types/aos": "^3.0.7",
@@ -28,7 +28,7 @@
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "eslint": "^8",
-    "eslint-config-next": "14.2.5",
+    "eslint-config-next": "14.2.6",
     "postcss": "^8",
     "prettier": "^3.3.3",
     "prettier-plugin-tailwindcss": "^0.6.6",

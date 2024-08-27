@@ -22,7 +22,7 @@ export default function Partners() {
               </Paragraph>
             </SectionHeader>
           </FadeUp>
-          <FadeUp className="sm:partnersGrid grid grid-cols-2 grid-rows-[repeat(4,150px)] justify-center gap-4 py-6 2xl:grid-cols-4 2xl:grid-rows-[150px,150px] 2xl:pt-10">
+          <FadeUp className="grid grid-cols-2 grid-rows-[repeat(5,120px)] justify-center gap-4 py-6 sm:grid-cols-[repeat(4,150px)] xl:grid-rows-[150px,150px] 2xl:grid-cols-4 2xl:pt-10">
             {partners.map((partner) => (
               <div
                 key={partner.alt}

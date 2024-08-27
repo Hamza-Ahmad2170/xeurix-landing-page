@@ -6,12 +6,6 @@
   background: linear-gradient(135deg, #e2eff4, #ebe0e0);
 }
 
-.partnersGrid {
-  display: grid;
-  grid-template-columns: repeat(4, 150px);
-  grid-template-rows: repeat(2, 150px);
-}
-
 .partners:nth-of-type(1) img {
   width: 10rem;
 }
@@ -35,7 +29,7 @@
     }*/
 
 .partners:nth-of-type(8) img {
-  width: 12rem;
+  width: 11rem;
 }
 
 .partners:nth-of-type(5) img {

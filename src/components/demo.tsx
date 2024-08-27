@@ -26,10 +26,14 @@ export default function Demo() {
       if (!res.ok) throw new Error("Something went wrong");
       const data = await res.json();
       console.log(data);
+      setFormData({
+        firstName: "",
+        lastName: "",
+        email: "",
+      });
     } catch (error) {
       console.log(error);
     } finally {
-        
     }
   };
 

@@ -8,7 +8,7 @@ import NavLinks from "./NavLinks";
 
 export default function NavBar() {
   return (
-    <header className="sticky top-0 z-50 hidden bg-[#001b27] py-4 text-white lg:block">
+    <header className="fixed inset-x-0 top-0 z-50 hidden w-full bg-[#001b27] py-4 text-white lg:block">
       <div className="container flex items-center justify-between">
         <Link href="/" aria-label="Home">
           <Image src={logo} alt="Xeurix Logo" title="logo" />

@@ -19,6 +19,11 @@ const config: Config = {
       // },
     },
     extend: {
+      screens: {
+        laptop: {
+          raw: "(max-height: 800px)",
+        },
+      },
       fontFamily: {
         arial: ["var(--font-arial)"],
       },
