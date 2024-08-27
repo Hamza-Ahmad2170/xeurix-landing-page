@@ -8,4 +8,4 @@ export function cn(...inputs: ClassValue[]) {
 export const apiUrl =
   process.env.NODE_ENV === "development"
     ? "http://localhost:8000/"
-    : "https://app.xeurix.com/api";
+    : "https://app.xeurix.com/api/";
